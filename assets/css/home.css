@@ -1,0 +1,39 @@
+/*===========================================================
+banner CSS
+=============================================================*/
+.banner{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  padding-top: 150px;
+  z-index: 10;
+}
+
+.banner .banner-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.banner small{
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 800;
+  color: rgba(13, 13, 14, 0.4);
+}
+
+.banner h1{
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--primary-text2);
+}
+
+.banner h1 span{
+  color: var(--secondary);
+}

@@ -1,0 +1,361 @@
+/*===========================================================
+General CSS
+=============================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+:root {
+  --primary: #0075C8;
+  --secondary: #FF8B13;
+  --primary-text: #0D0D0E;
+  --primary-text2: #001E33;
+  --blue: #005999;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul li,
+ol li {
+  list-style: none;
+}
+
+a,
+p,
+i,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: none;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+
+button {
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+
+button:focus {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+select,
+input {
+  border: 0;
+  outline: none;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
+/* reset container width */
+@media (min-width: 1400px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      max-width: 1140px;
+  }
+}
+
+/* banner bg animation */
+@keyframes road {
+  25%{
+    fill: #f5f5f5;
+  }
+  50%{
+    fill: #455A64;
+  }
+}
+
+
+@keyframes red {
+  0% {
+    fill: #FF003D;
+  }
+  2%,
+  40% {
+    fill: #F4F4F4;
+  }
+  42%,
+  100% {
+    fill: #FF003D;
+  }
+}
+
+@keyframes white {
+  0%,
+  20% {
+    fill: #E0E0E0;
+  }
+  22%,
+  40% {
+    fill: #001AFF;
+  }
+  42%,
+  80% {
+    fill: #E0E0E0;
+  }
+  82%,
+  100% {
+    fill: #001AFF;
+  }
+}
+
+@keyframes grey {
+  0%,
+  40% {
+    fill: #FF8B13;
+  }
+  42%,
+  80% {
+    fill: #455A64;
+  }
+  82%,
+  100% {
+    fill: #FF8B13;
+  }
+}
+
+.red-light{
+  animation: red 2s linear infinite;
+}
+
+.white-light{
+  animation: white 2s linear infinite;
+}
+
+.grey-light{
+  animation: grey 2s linear infinite;
+}
+
+
+.road1{
+  animation: road 6s infinite;
+}
+
+.road2{
+  animation: road 6s infinite 0.5s;
+}
+
+.road3{
+  animation: road 6s infinite 1s;
+}
+
+.road4{
+  animation: road 6s infinite 1.5s;
+}
+
+.road5{
+  animation: road 6s infinite 2s;
+}
+
+
+/* menu item animation */
+@keyframes slide {
+  0%{
+    top: 100%;
+    opacity: 1;
+  }
+  20%{
+    top: 0;
+  }
+  40%{
+    top: 0;
+    opacity: 0.5;
+  }
+  60%{
+    top: 100%;
+    opacity: 1;
+  }
+}
+
+/* animation button */
+.animate-btn{
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-btn::before{
+  content: '';
+  height: 250%;
+  width: 120%;
+  position: absolute;
+  top: 40%;
+  right: 95%;
+  z-index: 1;
+  transform: rotate(-35deg);
+  transition: all 0.6s ease;
+}
+
+.animate-btn-fill::before{
+  background-color: white;
+}
+
+.animate-btn-outline::before{
+  background-color: var(--primary);
+}
+
+.animate-btn:hover::before{
+  top: -60%;
+  right: -10%;
+  opacity: 0.1;
+}
+
+/*===========================================================
+header CSS
+=============================================================*/
+.navbar-toggler{
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon{
+  background-image: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menubar{
+  width: 100%;
+  position: fixed;
+  z-index: 50;
+  background-color: white;
+}
+
+.menubar .navbar{
+  padding: 16px 0;
+}
+
+.menubar .navbar-brand{
+  padding: 0;
+  margin: 0;
+  margin-right: 32px;
+}
+
+.menubar .nav-item{
+  margin: 0 8px !important;
+}
+
+.menubar .nav-link{
+  padding: 0;
+  padding: 10px 13px !important;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(13, 13, 14, 0.60);
+  overflow: hidden;
+  position: relative;
+}
+
+.menubar .nav-link.active::after{
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 117, 200, 0.08);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+  animation: slide 7s ease-in-out infinite;
+}
+
+.menubar .nav-link.active{
+  color: var(--primary-text);
+  background-color: rgba(0, 117, 200, 0.08);
+}
+
+.menubar .right-nav{
+  gap: 12px;
+}
+
+.menubar .right-nav a{
+  display: inline-block;
+  padding: 8px 26px;
+  font-weight: 600;
+  color: var(--primary-text);
+  border-radius: 8px;
+}
+
+.menubar .right-nav .register-btn{
+  border: 1px solid transparent;
+}
+
+.menubar .right-nav .register-btn:hover{
+  border-color: rgba(54, 54, 54, 0.12);
+  box-shadow: 0px 20px 24px -4px rgba(35, 160, 156, 0.04);
+  background-color: rgba(35, 160, 156, 0.12);
+}
+
+.menubar .right-nav .login-btn{
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0px 20px 24px -4px rgba(0, 200, 183, 0.08), 0px 8px 8px -4px rgba(0, 200, 183, 0.03);
+}
+
