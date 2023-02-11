@@ -241,7 +241,10 @@ a:focus {
   right: 95%;
   z-index: 1;
   transform: rotate(-35deg);
-  transition: all 0.6s ease;
+  /* transition: all 0.5s ease-in-out; */
+  /* transition: all 0.5s cubic-bezier(0.9,1.8,1,.4); */
+  /* transition: all 0.6s cubic-bezier(.94,-0.39,.09,1.44); */
+  transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .animate-btn-fill::before{
@@ -253,7 +256,7 @@ a:focus {
 }
 
 .animate-btn:hover::before{
-  top: -60%;
+  top: -65%;
   right: -10%;
   opacity: 0.1;
 }
@@ -304,7 +307,6 @@ header CSS
 }
 
 .menubar .nav-link{
-  padding: 0;
   padding: 10px 13px !important;
   border-radius: 8px;
   font-size: 16px;
@@ -314,6 +316,7 @@ header CSS
   position: relative;
 }
 
+.menubar .nav-link:hover::after,
 .menubar .nav-link.active::after{
   content: '';
   height: 100%;
@@ -326,6 +329,7 @@ header CSS
   animation: slide 7s ease-in-out infinite;
 }
 
+.menubar .nav-link:hover,
 .menubar .nav-link.active{
   color: var(--primary-text);
   background-color: rgba(0, 117, 200, 0.08);
