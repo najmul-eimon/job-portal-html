@@ -226,29 +226,65 @@ a:focus {
   }
 }
 
+/* banner heading border animation */
+@keyframes enlarge {
+  0%{
+    transform: translateX(-50%) scaleX(1);
+    opacity: 1;
+  }
+  50%{
+    transform: translateX(-50%) scaleX(1.2);
+    opacity: 0.8;
+  }
+  100%{
+    transform: translateX(-50%) scaleX(1);
+    opacity: 1;
+  }
+}
+
 /* animation button */
 .animate-btn{
   position: relative;
   overflow: hidden;
+  display: inline-block;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  z-index: 10;
 }
 
 .animate-btn::before{
   content: '';
-  height: 250%;
+  height: 300%;
   width: 120%;
   position: absolute;
   top: 40%;
   right: 95%;
-  z-index: 1;
-  transform: rotate(-35deg);
-  /* transition: all 0.5s ease-in-out; */
+  z-index: -1;
+  transform: rotate(-45deg);
+  transition: all 0.5s ease-in-out;
   /* transition: all 0.5s cubic-bezier(0.9,1.8,1,.4); */
   /* transition: all 0.6s cubic-bezier(.94,-0.39,.09,1.44); */
-  transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  /* transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
+}
+
+.animate-btn-fill{
+  background-color: var(--primary);
+  color: white;
+}
+
+.animate-btn-fill:hover,
+.animate-btn-outline:hover{
+  color: white;
 }
 
 .animate-btn-fill::before{
   background-color: white;
+}
+
+.animate-btn-outline{
+  border: 1px solid var(--primary);
+  color: var(--blue);
 }
 
 .animate-btn-outline::before{
@@ -259,6 +295,10 @@ a:focus {
   top: -65%;
   right: -10%;
   opacity: 0.1;
+}
+
+.animate-btn-outline:hover::before{
+  opacity: 1;
 }
 
 /*===========================================================
@@ -287,9 +327,38 @@ header CSS
 
 .menubar{
   width: 100%;
-  position: fixed;
-  z-index: 50;
   background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.menubar.navFixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  animation: mymove 0.4s linear;
+  box-shadow: 0px 12px 9px -4px rgba(255, 255, 255, 0.04), 0px 4px 4px -2px rgba(0, 0, 0, 0.03);
+}
+
+@keyframes mymove {
+  0% {
+      -webkit-transform: translateY(-100%);
+      -moz-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+      -o-transform: translateY(-100%);
+      transform: translateY(-100%);
+  }
+
+  100% {
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+      -o-transform: translateY(0px);
+      transform: translateY(0px);
+  }
 }
 
 .menubar .navbar{
@@ -310,10 +379,11 @@ header CSS
   padding: 10px 13px !important;
   border-radius: 8px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   color: rgba(13, 13, 14, 0.60);
   overflow: hidden;
   position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
 .menubar .nav-link:hover::after,
@@ -339,16 +409,15 @@ header CSS
   gap: 12px;
 }
 
-.menubar .right-nav a{
-  display: inline-block;
-  padding: 8px 26px;
-  font-weight: 600;
-  color: var(--primary-text);
-  border-radius: 8px;
+.menubar .right-nav .animate-btn::before{
+  transform: rotate(-35deg);
 }
 
 .menubar .right-nav .register-btn{
-  border: 1px solid transparent;
+  border-color: transparent;
+  padding: 8px 26px;
+  font-weight: 600;
+  color: var(--primary-text);
 }
 
 .menubar .right-nav .register-btn:hover{
@@ -357,9 +426,18 @@ header CSS
   background-color: rgba(35, 160, 156, 0.12);
 }
 
+.menubar .right-nav .register-btn:hover::before{
+  opacity: 0.2;
+}
+
 .menubar .right-nav .login-btn{
-  background-color: var(--primary);
-  color: white;
+  padding: 8px 26px;
+  font-weight: 600;
   box-shadow: 0px 20px 24px -4px rgba(0, 200, 183, 0.08), 0px 8px 8px -4px rgba(0, 200, 183, 0.03);
 }
 
+@media screen and (max-width: 575px) {
+  .menubar .navbar {
+    padding: 8px 0;
+  }
+}

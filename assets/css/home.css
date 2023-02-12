@@ -2,16 +2,18 @@
 banner CSS
 =============================================================*/
 .banner{
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   width: 100%;
   position: relative;
   padding-top: 150px;
   z-index: 10;
+  background: linear-gradient(180deg, #F9FDFF 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .banner .banner-bg{
   position: absolute;
-  top: 0;
+  /* top: 0; */
   left: 0;
   right: 0;
   bottom: 0;
@@ -32,8 +34,346 @@ banner CSS
   font-size: 56px;
   font-weight: 800;
   color: var(--primary-text2);
+  position: relative;
+  z-index: 10;
 }
 
 .banner h1 span{
   color: var(--secondary);
+}
+
+.banner h1::after{
+  content: '';
+  width: 134px;
+  height: 14px;
+  background-color: #33AAFF;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  animation: enlarge 3s infinite;
+}
+
+.filter-job{
+  /* background: rgba(255, 255, 255, 0.04); */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 20px 24px -4px rgba(0, 0, 0, 0.08), 0px 8px 8px -4px rgba(0, 0, 0, 0.03);
+  margin-top: 87px;
+  margin-bottom: 69px;
+  padding: 0 12px;
+}
+
+.filter-job .single-category{
+  padding: 12px;
+}
+
+.filter-job .single-category .category-heading{
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.filter-job .single-category .category-heading>div{
+  gap: 12px;
+}
+
+.filter-job small{
+  font-weight: 500;
+  font-size: 12px;
+  color: rgba(13, 13, 14, 0.4);
+}
+
+.filter-job i{
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+}
+
+.filter-job .icon{
+  display: flex;
+  padding: 4px;
+}
+
+.filter-job .keywords input{
+  width: 100%;
+  height: 28px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-text);
+  background-color: transparent;
+}
+
+.filter-job .keywords input::placeholder{
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(13, 13, 14, 0.4);
+}
+
+.banner .search-btn-main{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.banner .search-btn{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 28px;
+}
+
+.banner .search-btn i{
+  font-size: 20px;
+  color: white;
+}
+
+.banner .search-btn::before{
+  right: 75%;
+}
+
+.banner .search-btn:hover::before{
+  right: -10%;
+}
+
+.banner .popular-search{
+  font-weight: 500;
+  font-size: 16px;
+  color: rgba(13, 13, 14, 0.6);
+}
+
+.banner .popular-search span{
+  font-weight: 800;
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .banner .banner-bg{
+    top: unset;
+  }
+  
+  .banner h1 {
+    font-size: 40px;
+  }
+
+  .filter-job {
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .banner .banner-bg{
+    top: unset;
+  }
+
+  .banner h1 {
+    font-size: 36px;
+  }
+
+  .filter-job {
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .banner{
+    padding-top: 100px;
+  }
+
+  .banner .banner-bg{
+    top: unset;
+  }
+
+  .banner h1 {
+    font-size: 30px;
+  }
+
+  .banner .search-btn-main{
+    justify-content: start;
+  }
+
+  .banner .search-btn::before {
+    right: 93%;
+    top: 50%;
+  }
+
+  .banner .search-btn {
+    padding: 10px 26px;
+  }
+
+  .banner .search-btn:hover::before {
+    right: -15%;
+    top: -70%;
+    transform: rotate(-25deg);
+  }
+
+  .filter-job {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .banner{
+    padding-top: 82px;
+  }
+
+  .banner .banner-bg{
+    top: unset;
+  }
+  
+  .banner small {
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .banner h1 {
+    font-size: 20px;
+  }
+
+  .banner h1::after {
+    width: 51px;
+    height: 6px;
+  }
+
+  .filter-job {
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: -2px 2px 16px -4px rgba(0, 0, 0, 0.08), 2px 1px 6px -2px rgba(0, 0, 0, 0.03);
+    margin-top: 24px;
+    margin-bottom: 10px;
+    padding: 12px;
+  }
+
+  .filter-job .single-category .category-heading{
+    justify-content: space-between;
+  }
+
+  .filter-job .single-category.keywords .category-heading{
+    justify-content: start;
+  }
+
+  .filter-job .single-category {
+    padding: 0;
+  }
+
+  .banner .search-btn-main{
+    justify-content: center;
+    padding-top: 27px;
+  }
+
+  .banner .search-btn {
+    padding: 9px 26px;
+  }
+
+  .banner .popular-search {
+    font-size: 10px;
+  }
+
+  .banner .popular-search span {
+    display: block;
+  }
+
+  .banner .search-btn::before {
+    right: 93%;
+    top: 50%;
+  }
+
+  .banner .search-btn:hover::before {
+    right: -15%;
+    top: -70%;
+    transform: rotate(-25deg);
+  }
+}
+
+/*===========================================================
+company CSS
+=============================================================*/
+.company{
+  padding: 72px 0;
+}
+
+.company .title{
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.company .title h2{
+  font-weight: 700;
+  font-size: 20px;
+  color: rgba(13, 13, 14, 0.6);
+}
+
+.company .company-slider img{
+  opacity: 0.2;
+  transition: all 0.3s linear;
+}
+
+.company .company-slider img:hover{
+  opacity: 1;
+}
+
+.company .company-slider .swiper-wrapper {
+  transition-timing-function: linear;
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+}
+
+/*===========================================================
+start-with CSS
+=============================================================*/
+.start-with{
+  padding: 72px 0;
+}
+
+.start-with span{
+  display: inline-block;
+  color: var(--primary);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.start-with h2{
+  color: var(--primary-text);
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.start-with p{
+  color: rgba(13, 13, 14, 0.6);
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 24px;
+  padding-bottom: 36px;
+}
+
+.start-with .buttons{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.start-with .buttons .find-btn,
+.start-with .buttons .reg-btn{
+  padding: 16px 40px;
+}
+
+.start-with .buttons .find-btn::before{
+  transform: rotate(-36deg);
+}
+
+.start-with .buttons .find-btn:hover::before{
+  transform: rotate(-30deg);
+  right: -4%;
+  top: -82%;
+}
+
+.start-with .buttons .reg-btn::before{
+  right: 78%;
+}
+
+.start-with .buttons .reg-btn:hover::before{
+  right: -10%;
 }

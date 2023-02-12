@@ -4,16 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
   <title>Job Portal | Home</title>
+  <script src="https://unpkg.com/phosphor-icons"></script>
 
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/select2.min.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/filter.css">
   <link rel="stylesheet" href="assets/css/home.css">
 </head>
 
 <body>
   <!-- header start -->
-  <header class="menubar">
+  <header class="menubar" id="menubar">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -72,9 +77,97 @@
     <section class="banner">
       <div class="container">
         <div class="row">
-          <div class="col-lg-10 offset-lg-1 text-center">
-            <small>Explore thousands of jobs in one place and get the job of your dream</small>
-            <h1>The <span>Easiest</span> Way to Get Your <br> New Job</h1>
+          <div class="col-lg-10 offset-lg-1">
+            <div class="text-center">
+              <small>Explore thousands of jobs in one place and get the job of your dream</small>
+              <h1>The <span>Easiest</span> Way to Get Your <br> New Job</h1>
+            </div>
+
+            <div class="filter-job">
+              <div class="row">
+
+                <!-- industry -->
+                <div class="col-md-6 col-lg-2">
+                  <div class="single-category">
+                    <div class="d-flex align-items-center category-heading">
+                      <div class="d-flex align-items-center">
+                        <i class="ph-suitcase-simple"></i>
+                        <small>Industry</small>
+                      </div>
+                      <span class="icon">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.61405 8.61203L7.06739 12.0654C7.58739 12.5854 8.42739 12.5854 8.94739 12.0654L12.4007 8.61203C13.2407 7.77203 12.6407 6.33203 11.4541 6.33203H4.54739C3.36072 6.33203 2.77405 7.77203 3.61405 8.61203Z" fill="#070707"/>
+                        </svg>
+                      </span>
+                    </div>
+
+                    <select class="filter-select" id="industry-select">
+                      <option value="1">Android</option>
+                      <option value="2">Accounting</option>
+                      <option value="3">UX/UI Designer</option>
+                      <option value="4">Fintech</option>
+                      <option value="5">Front-end</option>
+                      <option value="6">Back-end</option>
+                      <option value="7">IOS</option>
+                      <option value="8">Sound</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Location -->
+                <div class="col-md-6 col-lg-2">
+                  <div class="single-category">
+                    <div class="d-flex align-items-center category-heading">
+                      <div class="d-flex align-items-center">
+                        <i class="ph-map-trifold"></i>
+                        <small>Location</small>
+                      </div>
+                      <span class="icon">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.61405 8.61203L7.06739 12.0654C7.58739 12.5854 8.42739 12.5854 8.94739 12.0654L12.4007 8.61203C13.2407 7.77203 12.6407 6.33203 11.4541 6.33203H4.54739C3.36072 6.33203 2.77405 7.77203 3.61405 8.61203Z" fill="#070707"/>
+                        </svg>
+                      </span>
+                    </div>
+
+                    <select class="filter-select" id="location-select">
+                      <option value="1">California, USA</option>
+                      <option value="2">Alabama, USA</option>
+                      <option value="3">Alaska</option>
+                      <option value="4">Colorado</option>
+                      <option value="5">Florida</option>
+                      <option value="6">Georgia</option>
+                      <option value="7">Indiana</option>
+                      <option value="8">Louisiana</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- keywords -->
+                <div class="col-md-6 col-lg-5">
+                  <div class="single-category keywords">
+                    <div class="d-flex align-items-center category-heading">
+                      <i class="ph-pencil-simple-line"></i>
+                      <small>Your Keyword...</small>
+                    </div>
+                    <input type="text" placeholder="ui, ux, user interface, graphics" value="ui, ux, user interface, graphics">
+                  </div>
+                </div>
+
+                <!-- search button -->
+                <div class="col-md-6 col-lg-3">
+                  <div class="search-btn-main">
+                    <button type="button" class="animate-btn animate-btn-fill search-btn">
+                      <i class="ph-magnifying-glass"></i>
+                      Search
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <p class="popular-search"><span>Popular Searches:</span> Designer,  Web, IOS, Developer, PHP, Senior, Engineer,</p>
+            </div>
           </div>
         </div>
       </div>
@@ -1314,11 +1407,92 @@
         </svg>
     </section>
     <!-- banner end -->
+
+    <!-- company start -->
+    <section class="company">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- title -->
+            <div class="title">
+              <h2>The world's best companies are hiring here...</h2>
+            </div>
+
+            <!-- slider -->
+            <div class="swiper company-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide item">
+                  <img src="assets/images/company/blvck.png" alt="">
+                </div>
+                <div class="swiper-slide item">
+                  <img src="assets/images/company/bysl.png" alt="">
+                </div>
+                <div class="swiper-slide item">
+                  <img src="assets/images/company/eversend.png" alt="">
+                </div>
+                <div class="swiper-slide item">
+                  <img src="assets/images/company/feedly.png" alt="">
+                </div>
+                <div class="swiper-slide item">
+                  <img src="assets/images/company/illiyeen.png" alt="">
+                </div>
+                <div class="swiper-slide item">
+                  <img src="assets/images/company/legends.png" alt="">
+                </div>
+                <div class="swiper-slide item">
+                  <img src="assets/images/company/synckloud.png" alt="">
+                </div>
+                <div class="swiper-slide item">
+                  <img src="assets/images/company/zomato.png" alt="">
+                </div>
+                <div class="swiper-slide item">
+                  <img src="assets/images/company/bysl.png" alt="">
+                </div>
+                <div class="swiper-slide item">
+                  <img src="assets/images/company/eversend.png" alt="">
+                </div>
+                <div class="swiper-slide item">
+                  <img src="assets/images/company/feedly.png" alt="">
+                </div>
+                <div class="swiper-slide item">
+                  <img src="assets/images/company/illiyeen.png" alt="">
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- company end -->
+
+    <!-- start-with start -->
+    <div class="start-with">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <span>START WITH US</span>
+            <h2>Explore thousands of jobs in one place and get the job of your dream</h2>
+            <p>We know the best solution for all of your business ideas and we can help you solve all business problems</p>
+            <div class="buttons">
+              <button type="button" class="animate-btn animate-btn-fill find-btn">
+                <i class="ph-magnifying-glass"></i>
+                Find here for new job
+              </button>
+              <button type="button" class="animate-btn animate-btn-outline reg-btn">
+                Register
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- start-with end -->
   </main>
   <!-- main end -->
   
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/jquery-3.6.1.min.js"></script>
+  <script src="assets/js/select2.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 </html>
