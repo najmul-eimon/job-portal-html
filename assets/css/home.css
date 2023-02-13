@@ -129,14 +129,6 @@ banner CSS
   color: white;
 }
 
-.banner .search-btn::before{
-  right: 75%;
-}
-
-.banner .search-btn:hover::before{
-  right: -10%;
-}
-
 .banner .popular-search{
   font-weight: 500;
   font-size: 16px;
@@ -194,19 +186,8 @@ banner CSS
     justify-content: start;
   }
 
-  .banner .search-btn::before {
-    right: 93%;
-    top: 50%;
-  }
-
   .banner .search-btn {
     padding: 10px 26px;
-  }
-
-  .banner .search-btn:hover::before {
-    right: -15%;
-    top: -70%;
-    transform: rotate(-25deg);
   }
 
   .filter-job {
@@ -275,25 +256,14 @@ banner CSS
     display: block;
   }
 
-  .banner .search-btn::before {
-    right: 93%;
-    top: 50%;
-  }
-
-  .banner .search-btn:hover::before {
-    right: -15%;
-    top: -70%;
-    transform: rotate(-25deg);
+  .banner .search-btn::before{
+    display: none;
   }
 }
 
 /*===========================================================
 company CSS
 =============================================================*/
-.company{
-  padding: 72px 0;
-}
-
 .company .title{
   padding-bottom: 40px;
   text-align: center;
@@ -323,11 +293,8 @@ company CSS
 /*===========================================================
 start-with CSS
 =============================================================*/
-.start-with{
-  padding: 72px 0;
-}
 
-.start-with span{
+.start-with .left-part span{
   display: inline-block;
   color: var(--primary);
   text-transform: uppercase;
@@ -335,13 +302,13 @@ start-with CSS
   font-weight: 700;
 }
 
-.start-with h2{
+.start-with .left-part h2{
   color: var(--primary-text);
   font-size: 32px;
   font-weight: 800;
 }
 
-.start-with p{
+.start-with .left-part p{
   color: rgba(13, 13, 14, 0.6);
   font-size: 16px;
   font-weight: 500;
@@ -361,19 +328,375 @@ start-with CSS
 }
 
 .start-with .buttons .find-btn::before{
-  transform: rotate(-36deg);
+  right: calc(100% - 38px);
 }
-
 .start-with .buttons .find-btn:hover::before{
-  transform: rotate(-30deg);
-  right: -4%;
-  top: -82%;
+  right: calc(0% - 50px);
 }
 
-.start-with .buttons .reg-btn::before{
-  right: 78%;
+.start-with .right-part{
+  height: 384px;
+  width: 100%;
+  position: relative;
 }
 
-.start-with .buttons .reg-btn:hover::before{
-  right: -10%;
+.start-with .single-card{
+  box-shadow: 0px 26.3014px 52.6027px -9.86301px rgba(0, 0, 0, 0.14);
+  padding: 14px 20px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 240px;
+  width: fit-content;
+  background-color: linear-gradient(to right, rgba(255, 255, 255, 0.31), rgba(194, 225, 255, 0.19), rgba(143, 200, 254, 0.2), rgba(52, 142, 253, 0.56));
+  position: absolute;
+  animation: mover 1.5s infinite alternate;
+}
+
+.start-with .single-card.job{
+  top: 80px;
+  left: 87px;
+}
+
+.start-with .single-card.hired{
+  right: 0;
+  bottom: 106px;
+}
+
+.start-with .single-card.companies{
+  left: 62px;
+  bottom: 20px;
+}
+
+.start-with .single-card .icon-box{
+  height: 78px;
+  width: 78px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.start-with .single-card.job .icon-box{
+  background-color: #33AAFF;
+}
+
+.start-with .single-card.hired .icon-box{
+  background-color: #003C66;
+}
+
+.start-with .single-card.companies .icon-box{
+  background-color: #001E33;
+}
+
+.start-with .single-card h2{
+  color: var(--text);
+  font-size: 40px;
+  font-weight: 800;
+  padding-bottom: 6px;
+}
+
+.start-with .single-card p{
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(13, 13, 14, 0.6);
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .start-with .single-card .icon-box{
+    height: 60px;
+    width: 60px;
+  }
+
+  .start-with .single-card h2{
+    font-size: 31px;
+    padding-bottom: 4px;
+  }
+
+  .start-with .single-card p{
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .start-with .left-part h2 {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .start-with .single-card{
+    padding: 10px 14px;
+  }
+
+  .start-with .single-card .icon-box{
+    height: 60px;
+    width: 60px;
+  }
+
+  .start-with .single-card h2{
+    font-size: 31px;
+    padding-bottom: 4px;
+  }
+
+  .start-with .single-card p{
+    font-size: 10px;
+  }
+
+  .start-with .single-card.hired {
+    bottom: 120px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .start-with .left-part h2 {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .start-with .left-part p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .start-with .buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .start-with .buttons .find-btn,
+  .start-with .buttons .reg-btn{
+    padding: 12px 30px;
+  }
+
+  .start-with .single-card{
+    padding: 10px 14px;
+  }
+
+  .start-with .single-card .icon-box{
+    height: 60px;
+    width: 60px;
+  }
+
+  .start-with .single-card.job{
+    top: 42px;
+    left: auto;
+    right: 0;
+  }
+  
+  .start-with .single-card.hired{
+    right: auto;
+    left: 0;
+    bottom: unset;
+    top: 139px;
+  }
+  
+  .start-with .single-card.companies{
+    left: auto;
+    right: 0;
+    bottom: 57px;
+  }
+
+  .start-with .single-card h2{
+    font-size: 31px;
+    padding-bottom: 4px;
+  }
+
+  .start-with .single-card p{
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .start-with .left-part span {
+    font-size: 12px;
+  }
+
+  .start-with .left-part h2 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .start-with .buttons .find-btn,
+  .start-with .buttons .reg-btn{
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .start-with .single-card{
+    padding: 10px 14px;
+  }
+
+  .start-with .single-card .icon-box{
+    height: 60px;
+    width: 60px;
+  }
+
+  .start-with .single-card.job{
+    top: 42px;
+    left: auto;
+    right: 0;
+  }
+  
+  .start-with .single-card.hired{
+    right: auto;
+    left: 0;
+    bottom: unset;
+    top: 139px;
+  }
+  
+  .start-with .single-card.companies{
+    left: auto;
+    right: 0;
+    bottom: 57px;
+  }
+
+  .start-with .single-card h2{
+    font-size: 31px;
+    padding-bottom: 4px;
+  }
+
+  .start-with .single-card p{
+    font-size: 10px;
+  }
+
+  .start-with .buttons .find-btn:hover::before{
+    right: calc(100% - 38px);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .start-with .buttons {
+    flex-direction: column;
+  }
+}
+
+/*===========================================================
+popular-category CSS
+=============================================================*/
+.popular-category .single-category{
+  border-radius: 8px;
+  width: 100%;
+  background: #FBFBFB;
+  padding: 12px;
+  transition: all 0.4s ease-in-out;
+}
+
+.popular-category .single-category:hover{
+  background: linear-gradient(90deg, rgba(240, 254, 255, 0.3) 0%, rgba(234, 254, 255, 0.29) 100%);
+  box-shadow: 0px 20px 24px -4px rgba(0, 0, 0, 0.08), 0px 8px 8px -4px rgba(0, 0, 0, 0.03);
+}
+
+.popular-category .single-category .image{
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.popular-category .single-category .image img{
+  width: 100%;
+}
+
+.popular-category .single-category .image span{
+  text-transform: capitalize;
+  display: inline-block;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+  padding: 0 11px;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 700;
+  background-color: #E5F4FF;
+  border-radius: 90px;
+}
+
+.popular-category .single-category h3{
+  font-size: 18px;
+  color: var(--primary-text);
+  font-weight: 800;
+}
+
+.popular-category .single-category p{
+  font-weight: 500;
+  font-size: 16px;
+  color: rgba(13, 13, 14, 0.8);
+  padding: 12px 0;
+}
+
+.popular-category .single-category a{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.popular-category .load-more-main{
+  text-align: center;
+  margin-top: 24px;
+}
+
+.popular-category .load-more-main button{
+  padding: 16px 26px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--primary);
+  border-color: rgba(54, 54, 54, 0.12);;
+}
+
+.popular-category .load-more-main button:hover::before{
+  opacity: 0.2;
+}
+
+/*===========================================================
+about CSS
+=============================================================*/
+.about{
+  background: url(../images/about-us.png) no-repeat center;
+  background-size: cover;
+}
+
+.about .single-counter .icon-box{
+  height: 88px;
+  width: 88px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(201, 201, 201, 0.12);
+  margin: auto;
+}
+
+.about .single-counter h3{
+  padding: 32px 0 8px 0;
+  font-size: 32px;
+  line-height: 50px;
+  font-weight: 800;
+  color: var(--primary-text2);
+}
+
+.about .single-counter p{
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+@media screen and (max-width: 767px) {
+  .about .single-counter .icon-box {
+    height: 56px;
+    width: 56px;
+  }
+
+  .about .single-counter h3{
+    padding: 16px 0 0 0;
+  }
+
+  .about .single-counter p{
+    font-size: 12px;
+  }
 }

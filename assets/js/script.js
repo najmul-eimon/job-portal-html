@@ -54,4 +54,68 @@ $(function(){
     }
   });
 
+  /*======================= Counter up ========================*/
+  var counterUp = document.querySelector('#counter');
+  var counterAbout = document.querySelector('#about-counter');
+  var counted = 0;
+  var aboutCounted = 0;
+
+  $(window).scroll(function() {
+    if(counterUp){
+    var oTop = $('#counter').offset().top - window.innerHeight;
+
+    if (counted == 0 && $(window).scrollTop() > oTop) {
+        $('.counter').each(function() {
+          var $this = $(this),
+            countTo = $this.attr('data-count');
+          $({
+            countNum: $this.text()
+          }).animate({
+              countNum: countTo
+            },
+            {
+              duration: 2000,
+              easing: 'swing',
+              step: function() {
+                $this.text(Math.floor(this.countNum));
+              },
+              complete: function() {
+                $this.text(this.countNum);
+                //alert('finished');
+              }
+            });
+        });
+        counted = 1;
+      }
+    }
+
+    if(counterAbout){
+      var oTop1 = $('#about-counter').offset().top - window.innerHeight;
+
+      if (aboutCounted == 0 && $(window).scrollTop() > oTop1) {
+        $('.about-counter').each(function() {
+          var $this = $(this),
+            countTo = $this.attr('data-count');
+          $({
+            countNum: $this.text()
+          }).animate({
+              countNum: countTo
+            },
+            {
+              duration: 2000,
+              easing: 'swing',
+              step: function() {
+                $this.text(Math.floor(this.countNum));
+              },
+              complete: function() {
+                $this.text(this.countNum);
+                //alert('finished');
+              }
+            });
+        });
+        aboutCounted = 1;
+      }
+    }
+  });
+
 });

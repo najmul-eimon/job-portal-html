@@ -8,6 +8,7 @@ General CSS
   --secondary: #FF8B13;
   --primary-text: #0D0D0E;
   --primary-text2: #001E33;
+  --text: #003C66;
   --blue: #005999;
 }
 
@@ -105,6 +106,10 @@ a:focus {
 
 .scroll-lock {
   overflow: hidden;
+}
+
+.row-gutter{
+  --bs-gutter-y: 24px;
 }
 
 /* reset container width */
@@ -242,6 +247,17 @@ a:focus {
   }
 }
 
+/* moving animation */
+@keyframes mover {
+  0% { 
+    transform: translateY(0); 
+  }
+  100% { 
+    transform: translateY(-20px); 
+  }
+}
+
+
 /* animation button */
 .animate-btn{
   position: relative;
@@ -251,17 +267,18 @@ a:focus {
   font-size: 16px;
   font-weight: 500;
   z-index: 10;
+  box-sizing: border-box;
 }
 
 .animate-btn::before{
   content: '';
-  height: 300%;
-  width: 120%;
+  height: calc(100% + 300px);
+  width: calc(100% + 100px);
   position: absolute;
-  top: 40%;
-  right: 95%;
+  top: -50%;
+  right: calc(100% - 50px);
   z-index: -1;
-  transform: rotate(-45deg);
+  transform: rotate(-40deg);
   transition: all 0.5s ease-in-out;
   /* transition: all 0.5s cubic-bezier(0.9,1.8,1,.4); */
   /* transition: all 0.6s cubic-bezier(.94,-0.39,.09,1.44); */
@@ -292,13 +309,73 @@ a:focus {
 }
 
 .animate-btn:hover::before{
-  top: -65%;
-  right: -10%;
+  top: calc(-50% - 100px);
+  right: calc(0% - 50px);
   opacity: 0.1;
 }
 
 .animate-btn-outline:hover::before{
   opacity: 1;
+}
+
+/* title */
+.title{
+  padding-bottom: 56px;
+  text-align: center;
+}
+
+.title span{
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.title h2{
+  font-weight: 600;
+  font-size: 40px;
+  color: var(--primary-text);
+}
+
+.title p{
+  padding-top: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgba(13, 13, 14, 0.4);
+}
+
+.section-gap{
+  padding: 72px 0;
+}
+
+@media screen and (max-width: 767px) {
+  .title{
+    padding-bottom: 32px;
+  }
+
+  .animate-btn-outline:hover{
+    color: var(--primary);
+  }
+
+  .animate-btn:hover::before{
+    top: -50%;
+    right: calc(100% - 50px);
+    opacity: 1;
+  }
+
+  .section-gap{
+    padding: 40px 0;
+  }
+
+  .title h2{
+    font-weight: 800;
+    font-size: 24px;
+  }
+
+  .title p{
+    font-size: 14px;
+  }
+  
 }
 
 /*===========================================================
@@ -407,10 +484,6 @@ header CSS
 
 .menubar .right-nav{
   gap: 12px;
-}
-
-.menubar .right-nav .animate-btn::before{
-  transform: rotate(-35deg);
 }
 
 .menubar .right-nav .register-btn{
