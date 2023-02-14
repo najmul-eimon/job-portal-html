@@ -28,11 +28,11 @@ $(function(){
   });
 
   /*======================= company slider ========================*/
-  var swiper = new Swiper(".company-slider", {
+  var comSwiper = new Swiper(".company-slider", {
     freeMode: false,
     spaceBetween: 10,
     grabCursor: false,
-    slidesPerView: 4,
+    slidesPerView: 3,
     loop: true,
     autoplay: {
       delay: 0,
@@ -43,79 +43,67 @@ $(function(){
     freeModeMomentum: false,
     breakpoints: {
       576: {
-        slidesPerView: 6,
+        slidesPerView: 5,
       },
       768: {
-        slidesPerView: 8,
+        slidesPerView: 7,
       },
       992: {
+        slidesPerView: 9,
+      },
+      1200:{
         slidesPerView: 12,
       }
     }
   });
 
-  /*======================= Counter up ========================*/
-  var counterUp = document.querySelector('#counter');
-  var counterAbout = document.querySelector('#about-counter');
-  var counted = 0;
-  var aboutCounted = 0;
-
-  $(window).scroll(function() {
-    if(counterUp){
-    var oTop = $('#counter').offset().top - window.innerHeight;
-
-    if (counted == 0 && $(window).scrollTop() > oTop) {
-        $('.counter').each(function() {
-          var $this = $(this),
-            countTo = $this.attr('data-count');
-          $({
-            countNum: $this.text()
-          }).animate({
-              countNum: countTo
-            },
-            {
-              duration: 2000,
-              easing: 'swing',
-              step: function() {
-                $this.text(Math.floor(this.countNum));
-              },
-              complete: function() {
-                $this.text(this.countNum);
-                //alert('finished');
-              }
-            });
-        });
-        counted = 1;
+  /*======================= job location slider ========================*/
+  var locSwiper = new Swiper(".blog-slider", {
+    spaceBetween: 24,
+    grabCursor: false,
+    slidesPerView: 1,
+    loop: true,
+    autoplay: true,
+    speed: 3000,
+    allowTouchMove:false,
+    freeModeMomentum: false,
+    breakpoints: {
+      576: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
       }
-    }
-
-    if(counterAbout){
-      var oTop1 = $('#about-counter').offset().top - window.innerHeight;
-
-      if (aboutCounted == 0 && $(window).scrollTop() > oTop1) {
-        $('.about-counter').each(function() {
-          var $this = $(this),
-            countTo = $this.attr('data-count');
-          $({
-            countNum: $this.text()
-          }).animate({
-              countNum: countTo
-            },
-            {
-              duration: 2000,
-              easing: 'swing',
-              step: function() {
-                $this.text(Math.floor(this.countNum));
-              },
-              complete: function() {
-                $this.text(this.countNum);
-                //alert('finished');
-              }
-            });
-        });
-        aboutCounted = 1;
-      }
-    }
+    },
+    pagination: {
+      el: ".blog-pagination",
+      clickable: true,
+    },
   });
+
+  /*======================= Counter up ========================*/
+  $('.counter').counterUp({
+    delay: 10,
+    time: 1000
+  });
+
+  /*======================= latest job filtering ========================*/
+  $('.latest-job-category button').on('click', function (event) {
+    const parentName = $(this).parent().attr("class");
+
+    if(parentName !== 'dropdown'){
+      $(this).parent().siblings('.active').removeClass('active');
+      $(this).parent().addClass('active');
+    }
+    
+  });
+
+  var gridContainer = document.querySelector('#job-grid-container');
+  if(gridContainer){
+    var mixer1 = mixitup(gridContainer);
+  }
 
 });

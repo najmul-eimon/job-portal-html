@@ -2,6 +2,7 @@
 General CSS
 =============================================================*/
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
   --primary: #0075C8;
@@ -10,12 +11,14 @@ General CSS
   --primary-text2: #001E33;
   --text: #003C66;
   --blue: #005999;
+  --poppins: 'Poppins', sans-serif;
+  --lato: 'Lato', sans-serif;
 }
 
 body {
   width: 100%;
   max-width: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--lato);
 }
 
 html {
@@ -110,6 +113,17 @@ a:focus {
 
 .row-gutter{
   --bs-gutter-y: 24px;
+}
+
+/* scrollbar hide */
+.scrollbar-hidden::-webkit-scrollbar{
+  display: none;
+  width: 0;
+  scrollbar-width: none;
+}
+
+.scrollbar-hidden{
+  scrollbar-width: none;
 }
 
 /* reset container width */
@@ -332,6 +346,7 @@ a:focus {
 }
 
 .title h2{
+  font-family: var(--poppins);
   font-weight: 600;
   font-size: 40px;
   color: var(--primary-text);
@@ -348,11 +363,43 @@ a:focus {
   padding: 72px 0;
 }
 
-@media screen and (max-width: 767px) {
+/* load more button */
+.load-more-main{
+  margin-top: 24px;
+}
+
+.load-more-main button{
+  padding: 16px 26px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--primary);
+  border-color: rgba(54, 54, 54, 0.12);;
+}
+
+.load-more-main button:hover{
+  color: var(--primary);
+}
+
+.load-more-main button:hover::before{
+  opacity: 0.2;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
   .title{
     padding-bottom: 32px;
   }
 
+  .title h2{
+    font-weight: 800;
+    font-size: 24px;
+  }
+
+  .title p{
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .animate-btn-outline:hover{
     color: var(--primary);
   }
@@ -367,12 +414,21 @@ a:focus {
     padding: 40px 0;
   }
 
+  .title{
+    padding-bottom: 32px;
+  }
+
   .title h2{
     font-weight: 800;
     font-size: 24px;
   }
 
   .title p{
+    font-size: 14px;
+  }
+
+  .load-more-main button{
+    padding: 8px 32px;
     font-size: 14px;
   }
   
@@ -512,5 +568,149 @@ header CSS
 @media screen and (max-width: 575px) {
   .menubar .navbar {
     padding: 8px 0;
+  }
+  .menubar .nav-link:hover::after{
+    opacity: 0;
+    animation: none;
+  }
+  .menubar .nav-link:hover{
+    color: initial;
+    background-color: transparent;
+  }
+}
+
+/*===========================================================
+footer CSS
+=============================================================*/
+footer{
+  padding-top: 80px;
+  padding-bottom: 26px;
+  background: #FDFEFF;
+}
+
+.footer-logo{
+  display: block;
+}
+
+.footer-top{
+  padding-bottom: 188px;
+}
+
+.footer-top .about-company{
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(13, 13, 14, 0.6);
+  padding-top: 32px;
+}
+
+.footer-top .social{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 72px;
+}
+
+.footer-top .social a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 48px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 1px 2px 32px -12px rgba(189, 189, 189, 0.18);
+}
+
+.footer-top .footer-title h4{
+  padding-bottom: 40px;
+  font-size: 20px;
+  color: var(--primary-text2);
+  font-weight: 700;
+}
+
+.footer-top .footer-links li:not(:last-child){
+  margin-bottom: 16px;
+}
+
+.footer-top .footer-links a{
+  display: inline-block;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(13, 13, 14, 0.8);
+}
+
+.footer-top .footer-links a:hover{
+  color: var(--primary);
+}
+
+.footer-bottom .copyright{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-bottom .copyright p{
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--primary-text2);
+  flex-shrink: 0;
+}
+
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  footer{
+    padding-top: 40px;
+  }
+
+  .footer-top{
+    padding-bottom: 56px;
+  }
+
+  .footer-top .about-company{
+    padding-top: 24px;
+  }
+
+  .footer-top .social{
+    margin-top: 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  footer{
+    padding-top: 40px;
+  }
+
+  .footer-top{
+    padding-bottom: 56px;
+  }
+
+  .footer-top .about-company{
+    padding-top: 24px;
+  }
+
+  .footer-top .social{
+    margin-top: 32px;
+  }
+
+  .footer-about{
+    margin-bottom: 64px;
+  }
+
+  .footer-top .footer-title h4{
+    padding-bottom: 32px;
+    font-size: 16px;
+  }
+
+  .footer-top .footer-links li:not(:last-child){
+    margin-bottom: 12px;
+  }
+
+}
+
+@media screen and (max-width: 575px) {
+  .footer-bottom .copyright img{
+    width: 50px;
   }
 }
