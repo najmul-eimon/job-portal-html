@@ -91,7 +91,7 @@ $(function(){
   });
 
   /*======================= latest job filtering ========================*/
-  $('.latest-job-category button').on('click', function (event) {
+  $('.job-cat-btns button').on('click', function (event) {
     const parentName = $(this).parent().attr("class");
 
     if(parentName !== 'dropdown'){
@@ -102,8 +102,45 @@ $(function(){
   });
 
   var gridContainer = document.querySelector('#job-grid-container');
+  var allGridContainer = document.querySelector('#all-job-grid-container');
+
   if(gridContainer){
     var mixer1 = mixitup(gridContainer);
   }
+
+  if(allGridContainer){
+    var mixer2 = mixitup(allGridContainer);
+  }
+
+  /*======================= job slider range ========================*/
+
+  $('.filter-button').on('click', function(){
+    $(this).toggleClass('active');
+  });
+
+  function numberWithCommas(x) {
+    if (x !== null) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+  }
+
+  $( "#slider-range" ).slider({
+    range: true,
+    min: 0,
+    max: 100,
+    values: [ 5, 50 ],
+    slide: function( event, ui ) {
+      $( "#min" ).html(numberWithCommas(ui.values[ 0 ]) );
+      $( "#max" ).html(numberWithCommas(ui.values[ 1 ]) );
+    }
+  });
+
+  //slider range data tooltip set
+  var $handler = $("#slider-range .ui-slider-handle");
+  $handler.click();
+
+  $handler.eq(0).append("<b class='amount'>$<span id='min'>"+numberWithCommas($( "#slider-range" ).slider( "values", 0 )) +"</span>k</b>");
+  $handler.eq(1).append("<b class='amount'>$<span id='max'>"+numberWithCommas($( "#slider-range" ).slider( "values", 1 )) +"</span>k</b>");
+
 
 });

@@ -1,7 +1,7 @@
 /*===========================================================
 banner CSS
 =============================================================*/
-.banner{
+.banner {
   min-height: 100vh;
   height: auto;
   width: 100%;
@@ -9,9 +9,10 @@ banner CSS
   padding-top: 150px;
   z-index: 10;
   background: linear-gradient(180deg, #F9FDFF 0%, rgba(255, 255, 255, 0) 100%);
+  overflow-x: hidden;
 }
 
-.banner .banner-bg{
+.banner .banner-bg {
   position: absolute;
   /* top: 0; */
   left: 0;
@@ -23,14 +24,14 @@ banner CSS
   z-index: -1;
 }
 
-.banner small{
+.banner .explore {
   display: inline-block;
   font-size: 14px;
   font-weight: 800;
   color: rgba(13, 13, 14, 0.4);
 }
 
-.banner h1{
+.banner h1 {
   font-size: 56px;
   font-weight: 800;
   color: var(--primary-text2);
@@ -38,11 +39,11 @@ banner CSS
   z-index: 10;
 }
 
-.banner h1 span{
+.banner h1 span {
   color: var(--secondary);
 }
 
-.banner h1::after{
+.banner h1::after {
   content: '';
   width: 134px;
   height: 14px;
@@ -55,156 +56,59 @@ banner CSS
   animation: enlarge 3s infinite;
 }
 
-.filter-job{
-  /* background: rgba(255, 255, 255, 0.04); */
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0px 20px 24px -4px rgba(0, 0, 0, 0.08), 0px 8px 8px -4px rgba(0, 0, 0, 0.03);
-  margin-top: 87px;
-  margin-bottom: 69px;
-  padding: 0 12px;
-}
-
-.filter-job .single-category{
-  padding: 12px;
-}
-
-.filter-job .single-category .category-heading{
-  gap: 8px;
-  margin-bottom: 6px;
-}
-
-.filter-job .single-category .category-heading>div{
-  gap: 12px;
-}
-
-.filter-job small{
-  font-weight: 500;
-  font-size: 12px;
-  color: rgba(13, 13, 14, 0.4);
-}
-
-.filter-job i{
-  color: rgba(0, 0, 0, 0.4);
-  font-size: 20px;
-}
-
-.filter-job .icon{
-  display: flex;
-  padding: 4px;
-}
-
-.filter-job .keywords input{
-  width: 100%;
-  height: 28px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--primary-text);
-  background-color: transparent;
-}
-
-.filter-job .keywords input::placeholder{
-  font-size: 14px;
-  font-weight: 500;
-  color: rgba(13, 13, 14, 0.4);
-}
-
-.banner .search-btn-main{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.banner .search-btn{
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 18px 28px;
-}
-
-.banner .search-btn i{
-  font-size: 20px;
-  color: white;
-}
-
-.banner .popular-search{
+.banner .popular-search {
   font-weight: 500;
   font-size: 16px;
   color: rgba(13, 13, 14, 0.6);
 }
 
-.banner .popular-search span{
+.banner .popular-search span {
   font-weight: 800;
 }
 
 @media (min-width: 1200px) and (max-width: 1399px) {
-  .banner .banner-bg{
+  .banner .banner-bg {
     top: unset;
   }
-  
+
   .banner h1 {
     font-size: 40px;
-  }
-
-  .filter-job {
-    margin-top: 60px;
-    margin-bottom: 20px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  .banner .banner-bg{
+  .banner .banner-bg {
     top: unset;
   }
 
   .banner h1 {
     font-size: 36px;
   }
-
-  .filter-job {
-    margin-top: 60px;
-    margin-bottom: 20px;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .banner{
+  .banner {
     padding-top: 100px;
   }
 
-  .banner .banner-bg{
+  .banner .banner-bg {
     top: unset;
   }
 
   .banner h1 {
     font-size: 30px;
   }
-
-  .banner .search-btn-main{
-    justify-content: start;
-  }
-
-  .banner .search-btn {
-    padding: 10px 26px;
-  }
-
-  .filter-job {
-    margin-top: 60px;
-    margin-bottom: 40px;
-  }
 }
 
 @media screen and (max-width: 767px) {
-  .banner{
-    padding-top: 82px;
+  .banner {
+    padding-top: 85px;
   }
 
-  .banner .banner-bg{
+  .banner .banner-bg {
     top: unset;
   }
-  
+
   .banner small {
     font-size: 12px;
     font-weight: 700;
@@ -219,35 +123,6 @@ banner CSS
     height: 6px;
   }
 
-  .filter-job {
-    background: rgba(255, 255, 255, 0.06);
-    box-shadow: -2px 2px 16px -4px rgba(0, 0, 0, 0.08), 2px 1px 6px -2px rgba(0, 0, 0, 0.03);
-    margin-top: 24px;
-    margin-bottom: 10px;
-    padding: 12px;
-  }
-
-  .filter-job .single-category .category-heading{
-    justify-content: space-between;
-  }
-
-  .filter-job .single-category.keywords .category-heading{
-    justify-content: start;
-  }
-
-  .filter-job .single-category {
-    padding: 0;
-  }
-
-  .banner .search-btn-main{
-    justify-content: center;
-    padding-top: 27px;
-  }
-
-  .banner .search-btn {
-    padding: 9px 26px;
-  }
-
   .banner .popular-search {
     font-size: 10px;
   }
@@ -256,31 +131,35 @@ banner CSS
     display: block;
   }
 
-  .banner .search-btn::before{
-    display: none;
+  .banner .popular-search {
+    color: rgba(13, 13, 14, 0.4);
+  }
+
+  .banner .popular-search span {
+    color: rgba(13, 13, 14, 0.6);
   }
 }
 
 /*===========================================================
 company CSS
 =============================================================*/
-.company .title{
+.company .title {
   padding-bottom: 40px;
   text-align: center;
 }
 
-.company .title h2{
+.company .title h2 {
   font-weight: 700;
   font-size: 20px;
   color: rgba(13, 13, 14, 0.6);
 }
 
-.company .company-slider img{
+.company .company-slider img {
   opacity: 0.2;
   transition: all 0.3s linear;
 }
 
-.company .company-slider img:hover{
+.company .company-slider img:hover {
   opacity: 1;
 }
 
@@ -294,7 +173,7 @@ company CSS
 start-with CSS
 =============================================================*/
 
-.start-with .left-part span{
+.start-with .left-part span {
   display: inline-block;
   color: var(--primary);
   text-transform: uppercase;
@@ -302,13 +181,13 @@ start-with CSS
   font-weight: 700;
 }
 
-.start-with .left-part h2{
+.start-with .left-part h2 {
   color: var(--primary-text);
   font-size: 32px;
   font-weight: 800;
 }
 
-.start-with .left-part p{
+.start-with .left-part p {
   color: rgba(13, 13, 14, 0.6);
   font-size: 16px;
   font-weight: 500;
@@ -316,31 +195,32 @@ start-with CSS
   padding-bottom: 36px;
 }
 
-.start-with .buttons{
+.start-with .buttons {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
 .start-with .buttons .find-btn,
-.start-with .buttons .reg-btn{
+.start-with .buttons .reg-btn {
   padding: 16px 40px;
 }
 
-.start-with .buttons .find-btn::before{
+.start-with .buttons .find-btn::before {
   right: calc(100% - 38px);
 }
-.start-with .buttons .find-btn:hover::before{
+
+.start-with .buttons .find-btn:hover::before {
   right: calc(0% - 50px);
 }
 
-.start-with .right-part{
+.start-with .right-part {
   height: 384px;
   width: 100%;
   position: relative;
 }
 
-.start-with .single-card{
+.start-with .single-card {
   box-shadow: 0px 26.3014px 52.6027px -9.86301px rgba(0, 0, 0, 0.14);
   padding: 14px 20px;
   border-radius: 18px;
@@ -354,22 +234,22 @@ start-with CSS
   animation: mover 2s infinite alternate;
 }
 
-.start-with .single-card.job{
+.start-with .single-card.job {
   top: 80px;
   left: 87px;
 }
 
-.start-with .single-card.hired{
+.start-with .single-card.hired {
   right: 0;
   bottom: 106px;
 }
 
-.start-with .single-card.companies{
+.start-with .single-card.companies {
   left: 62px;
   bottom: 20px;
 }
 
-.start-with .single-card .icon-box{
+.start-with .single-card .icon-box {
   height: 78px;
   width: 78px;
   border-radius: 7px;
@@ -379,43 +259,43 @@ start-with CSS
   flex-shrink: 0;
 }
 
-.start-with .single-card.job .icon-box{
+.start-with .single-card.job .icon-box {
   background-color: #33AAFF;
 }
 
-.start-with .single-card.hired .icon-box{
+.start-with .single-card.hired .icon-box {
   background-color: #003C66;
 }
 
-.start-with .single-card.companies .icon-box{
+.start-with .single-card.companies .icon-box {
   background-color: #001E33;
 }
 
-.start-with .single-card h2{
+.start-with .single-card h2 {
   color: var(--text);
   font-size: 40px;
   font-weight: 800;
   padding-bottom: 6px;
 }
 
-.start-with .single-card p{
+.start-with .single-card p {
   font-weight: 500;
   font-size: 14px;
   color: rgba(13, 13, 14, 0.6);
 }
 
 @media (min-width: 1200px) and (max-width: 1399px) {
-  .start-with .single-card .icon-box{
+  .start-with .single-card .icon-box {
     height: 60px;
     width: 60px;
   }
 
-  .start-with .single-card h2{
+  .start-with .single-card h2 {
     font-size: 31px;
     padding-bottom: 4px;
   }
 
-  .start-with .single-card p{
+  .start-with .single-card p {
     font-size: 10px;
   }
 }
@@ -426,21 +306,21 @@ start-with CSS
     line-height: 34px;
   }
 
-  .start-with .single-card{
+  .start-with .single-card {
     padding: 10px 14px;
   }
 
-  .start-with .single-card .icon-box{
+  .start-with .single-card .icon-box {
     height: 60px;
     width: 60px;
   }
 
-  .start-with .single-card h2{
+  .start-with .single-card h2 {
     font-size: 31px;
     padding-bottom: 4px;
   }
 
-  .start-with .single-card p{
+  .start-with .single-card p {
     font-size: 10px;
   }
 
@@ -466,44 +346,44 @@ start-with CSS
   }
 
   .start-with .buttons .find-btn,
-  .start-with .buttons .reg-btn{
+  .start-with .buttons .reg-btn {
     padding: 12px 30px;
   }
 
-  .start-with .single-card{
+  .start-with .single-card {
     padding: 10px 14px;
   }
 
-  .start-with .single-card .icon-box{
+  .start-with .single-card .icon-box {
     height: 60px;
     width: 60px;
   }
 
-  .start-with .single-card.job{
+  .start-with .single-card.job {
     top: 42px;
     left: auto;
     right: 0;
   }
-  
-  .start-with .single-card.hired{
+
+  .start-with .single-card.hired {
     right: auto;
     left: 0;
     bottom: unset;
     top: 139px;
   }
-  
-  .start-with .single-card.companies{
+
+  .start-with .single-card.companies {
     left: auto;
     right: 0;
     bottom: 57px;
   }
 
-  .start-with .single-card h2{
+  .start-with .single-card h2 {
     font-size: 31px;
     padding-bottom: 4px;
   }
 
-  .start-with .single-card p{
+  .start-with .single-card p {
     font-size: 10px;
   }
 }
@@ -519,49 +399,49 @@ start-with CSS
   }
 
   .start-with .buttons .find-btn,
-  .start-with .buttons .reg-btn{
+  .start-with .buttons .reg-btn {
     width: 100%;
     padding: 12px 0;
   }
 
-  .start-with .single-card{
+  .start-with .single-card {
     padding: 10px 14px;
   }
 
-  .start-with .single-card .icon-box{
+  .start-with .single-card .icon-box {
     height: 60px;
     width: 60px;
   }
 
-  .start-with .single-card.job{
+  .start-with .single-card.job {
     top: 42px;
     left: auto;
     right: 0;
   }
-  
-  .start-with .single-card.hired{
+
+  .start-with .single-card.hired {
     right: auto;
     left: 0;
     bottom: unset;
     top: 139px;
   }
-  
-  .start-with .single-card.companies{
+
+  .start-with .single-card.companies {
     left: auto;
     right: 0;
     bottom: 57px;
   }
 
-  .start-with .single-card h2{
+  .start-with .single-card h2 {
     font-size: 31px;
     padding-bottom: 4px;
   }
 
-  .start-with .single-card p{
+  .start-with .single-card p {
     font-size: 10px;
   }
 
-  .start-with .buttons .find-btn:hover::before{
+  .start-with .buttons .find-btn:hover::before {
     right: calc(100% - 38px);
   }
 }
@@ -575,7 +455,7 @@ start-with CSS
 /*===========================================================
 popular-category CSS
 =============================================================*/
-.popular-category .single-category{
+.popular-category .single-category {
   border-radius: 8px;
   width: 100%;
   background: #FBFBFB;
@@ -583,23 +463,23 @@ popular-category CSS
   transition: all 0.4s ease-in-out;
 }
 
-.popular-category .single-category:hover{
+.popular-category .single-category:hover {
   background: linear-gradient(90deg, rgba(240, 254, 255, 0.3) 0%, rgba(234, 254, 255, 0.29) 100%);
   box-shadow: 0px 20px 24px -4px rgba(0, 0, 0, 0.08), 0px 8px 8px -4px rgba(0, 0, 0, 0.03);
 }
 
-.popular-category .single-category .image{
+.popular-category .single-category .image {
   border-radius: 8px;
   overflow: hidden;
   position: relative;
   margin-bottom: 16px;
 }
 
-.popular-category .single-category .image img{
+.popular-category .single-category .image img {
   width: 100%;
 }
 
-.popular-category .single-category .image span{
+.popular-category .single-category .image span {
   text-transform: capitalize;
   display: inline-block;
   position: absolute;
@@ -614,20 +494,20 @@ popular-category CSS
   border-radius: 90px;
 }
 
-.popular-category .single-category h3{
+.popular-category .single-category h3 {
   font-size: 18px;
   color: var(--primary-text);
   font-weight: 800;
 }
 
-.popular-category .single-category p{
+.popular-category .single-category p {
   font-weight: 500;
   font-size: 16px;
   color: rgba(13, 13, 14, 0.8);
   padding: 12px 0;
 }
 
-.popular-category .single-category a{
+.popular-category .single-category a {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -640,13 +520,13 @@ popular-category CSS
 /*===========================================================
 about CSS
 =============================================================*/
-.about{
+.about {
   background: url(../images/about-us.png) no-repeat center;
   background-size: cover;
   padding-bottom: 162px;
 }
 
-.about .single-counter .icon-box{
+.about .single-counter .icon-box {
   height: 88px;
   width: 88px;
   border-radius: 4px;
@@ -657,7 +537,7 @@ about CSS
   margin: auto;
 }
 
-.about .single-counter h3{
+.about .single-counter h3 {
   padding: 32px 0 8px 0;
   font-size: 32px;
   line-height: 50px;
@@ -665,7 +545,7 @@ about CSS
   color: var(--primary-text2);
 }
 
-.about .single-counter p{
+.about .single-counter p {
   font-size: 14px;
   font-weight: 500;
   color: var(--text);
@@ -677,11 +557,11 @@ about CSS
     width: 56px;
   }
 
-  .about .single-counter h3{
+  .about .single-counter h3 {
     padding: 16px 0 0 0;
   }
 
-  .about .single-counter p{
+  .about .single-counter p {
     font-size: 12px;
   }
 }
@@ -689,37 +569,36 @@ about CSS
 /*===========================================================
 latest-job CSS
 =============================================================*/
-.latest-job .latest-job-category{
+.latest-job .latest-job-category {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
   margin-bottom: 24px;
-  overflow-x: auto;
 }
 
-
-.latest-job .latest-job-category button{
+.latest-job .latest-job-category button {
   border-color: rgba(54, 54, 54, 0.12);
   /* box-shadow: 0px 20px 24px -4px rgba(255, 173, 38, 0.08), 0px 8px 8px -4px rgba(255, 173, 38, 0.03); */
   padding: 8px 24px;
+  font-weight: 600;
 }
 
-.latest-job .latest-job-category li.active button::before{
+.latest-job .latest-job-category li.active button::before {
   top: calc(-50% - 100px);
   right: calc(0% - 50px);
 }
 
-.latest-job .latest-job-category li.active button{
+.latest-job .latest-job-category li.active button {
   color: white;
   border-color: var(--primary);
 }
 
-.latest-job .latest-job-category li button:hover{
+.latest-job .latest-job-category li button:hover {
   border-color: var(--primary);
 }
 
-.latest-job .single-job{
+.latest-job .single-job {
   background: #FFFFFF;
   border: 1px solid #E2E5F1;
   border-radius: 8px;
@@ -730,12 +609,12 @@ latest-job CSS
   transition: all 0.3s ease-in-out;
 }
 
-.latest-job .single-job:hover{
+.latest-job .single-job:hover {
   background: linear-gradient(90deg, rgba(240, 254, 255, 0.3) 0%, rgba(234, 254, 255, 0.29) 100%);
   box-shadow: 0px 12px 16px -4px rgba(0, 0, 0, 0.08), 0px 4px 6px -2px rgba(0, 0, 0, 0.03);
 }
 
-.latest-job .single-job .icon{
+.latest-job .single-job .icon {
   height: 64px;
   width: 64px;
   flex-shrink: 0;
@@ -744,47 +623,47 @@ latest-job CSS
   justify-content: center;
 }
 
-.latest-job .single-job .job-content{
+.latest-job .single-job .job-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.latest-job .single-job h3{
+.latest-job .single-job h3 {
   font-size: 18px;
   font-weight: 800;
   color: var(--primary-text2);
   padding-bottom: 12px;
 }
 
-.latest-job .single-job ul li{
+.latest-job .single-job ul li {
   padding: 2px 0;
   display: flex;
   align-items: flex-start;
   gap: 4px;
 }
 
-.latest-job .single-job ul li:not(:last-child){
+.latest-job .single-job ul li:not(:last-child) {
   margin-bottom: 12px;
 }
 
-.latest-job .single-job ul li p{
+.latest-job .single-job ul li p {
   font-weight: 500;
   font-size: 14px;
   color: rgba(13, 13, 14, 0.8);
   transition: all 0.3s linear;
 }
 
-.latest-job .single-job ul li:hover p{
+.latest-job .single-job ul li:hover p {
   color: var(--primary-text);
 }
 
-.latest-job .single-job ul li:hover img{
+.latest-job .single-job ul li:hover img {
   transition: all 0.3s linear;
   filter: brightness(0) saturate(100%) invert(2%) sepia(4%) saturate(1485%) hue-rotate(201deg) brightness(90%) contrast(94%);
 }
 
-.latest-job .single-job a{
+.latest-job .single-job a {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -794,28 +673,28 @@ latest-job CSS
   width: fit-content;
 }
 
-.latest-job .single-job a i{
+.latest-job .single-job a i {
   font-size: 20px;
 }
 
-.latest-job .single-job a:hover{
+.latest-job .single-job a:hover {
   gap: 8px;
 }
 
 @media screen and (max-width: 767px) {
-  .latest-job .latest-job-category{
+  .latest-job .latest-job-category {
     justify-content: flex-start;
   }
 
-  .latest-job .single-job h3{
+  .latest-job .single-job h3 {
     font-size: 16px;
   }
 
-  .latest-job .single-job a{
+  .latest-job .single-job a {
     font-size: 12px;
   }
 
-  .latest-job .single-job .icon{
+  .latest-job .single-job .icon {
     height: 48px;
     width: 48px;
   }
@@ -824,11 +703,11 @@ latest-job CSS
 /*===========================================================
 job-location CSS
 =============================================================*/
-.job-location{
+.job-location {
   background: rgba(229, 244, 255, 0.12);
 }
 
-.job-location .item{
+.job-location .item {
   padding: 12px;
   border-radius: 8px;
   background: rgba(204, 234, 255, 0.12);
@@ -840,7 +719,7 @@ job-location CSS
   z-index: 10;
 }
 
-.job-location .item::after{
+.job-location .item::after {
   content: '';
   height: 100%;
   width: 100%;
@@ -854,16 +733,16 @@ job-location CSS
   transition: all 0.4s linear;
 }
 
-.job-location .item:hover{
+.job-location .item:hover {
   border-color: rgba(0, 0, 0, 0.04);
   box-shadow: 0px 12px 9px -4px rgba(255, 255, 255, 0.04), 0px 4px 4px -2px rgba(0, 0, 0, 0.03);
 }
 
-.job-location .item:hover::after{
+.job-location .item:hover::after {
   opacity: 1;
 }
 
-.job-location .item .image{
+.job-location .item .image {
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 12px;
@@ -871,7 +750,7 @@ job-location CSS
   position: relative;
 }
 
-.job-location .item .image img{
+.job-location .item .image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -880,11 +759,11 @@ job-location CSS
   -webkit-transform: translateZ(0) scale(1, 1);
 }
 
-.job-location .item:hover .image img{
+.job-location .item:hover .image img {
   transform: scale(1.1);
 }
 
-.job-location .item .image span{
+.job-location .item .image span {
   display: inline-block;
   font-size: 14px;
   font-weight: 500;
@@ -899,17 +778,17 @@ job-location CSS
   z-index: 20;
 }
 
-.job-location .item:hover .image span{
+.job-location .item:hover .image span {
   background: rgba(255, 255, 255, 0.36);
 }
 
-.job-location .item h3{
+.job-location .item h3 {
   font-size: 20px;
   font-weight: 700;
   color: var(--primary-text);
 }
 
-.job-location .item p{
+.job-location .item p {
   font-weight: 500;
   font-size: 16px;
   color: rgba(13, 13, 14, 0.6);
@@ -919,7 +798,7 @@ job-location CSS
   margin: 12px 0;
 }
 
-.job-location a{
+.job-location a {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -929,36 +808,36 @@ job-location CSS
   width: fit-content;
 }
 
-.job-location a i{
+.job-location a i {
   font-size: 20px;
 }
 
-.job-location .hide-desktop{
+.job-location .hide-desktop {
   display: none;
 }
 
 @media screen and (max-width: 767px) {
-  .job-location .item h3{
+  .job-location .item h3 {
     font-size: 16px;
   }
 
   .job-location a,
-  .job-location .item p{
+  .job-location .item p {
     font-size: 14px;
   }
 
-  .job-location .hide-desktop{
+  .job-location .hide-desktop {
     display: block;
   }
 
-  .job-location .hide-big-mobile{
+  .job-location .hide-big-mobile {
     display: none;
   }
-  
+
 }
 
 @media screen and (max-width: 576px) {
-  .job-location .hide-mobile{
+  .job-location .hide-mobile {
     display: none;
   }
 }
@@ -966,11 +845,11 @@ job-location CSS
 /*===========================================================
 blog CSS
 =============================================================*/
-.blog .blog-slider{
+.blog .blog-slider {
   padding: 20px 10px 36px 10px;
 }
 
-.blog .single-blog{
+.blog .single-blog {
   display: block;
   padding: 16px;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -979,7 +858,7 @@ blog CSS
   z-index: 10;
 }
 
-.blog .single-blog::after{
+.blog .single-blog::after {
   content: '';
   height: 100%;
   width: 100%;
@@ -993,15 +872,15 @@ blog CSS
   transition: all 0.4s linear;
 }
 
-.blog .single-blog:hover{
+.blog .single-blog:hover {
   box-shadow: 0px 12px 16px -4px rgba(0, 0, 0, 0.08), 0px 4px 6px -2px rgba(0, 0, 0, 0.03);
 }
 
-.blog .single-blog:hover::after{
+.blog .single-blog:hover::after {
   opacity: 1;
 }
 
-.blog .single-blog .image{
+.blog .single-blog .image {
   height: 232px;
   width: 100%;
   border-radius: 8px;
@@ -1010,33 +889,33 @@ blog CSS
 }
 
 .blog .single-blog .author img,
-.blog .single-blog .image img{
+.blog .single-blog .image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.blog .single-blog span{
+.blog .single-blog span {
   display: inline-block;
   font-weight: 600;
   font-size: 14px;
   color: rgba(13, 13, 14, 0.4);
 }
 
-.blog .single-blog h3{
+.blog .single-blog h3 {
   color: var(--primary-text2);
   font-size: 18px;
   font-weight: 800;
   padding: 16px 0;
 }
 
-.blog .single-blog p{
+.blog .single-blog p {
   font-size: 14px;
   color: rgba(13, 13, 14, 0.8);
   padding-bottom: 12px;
 }
 
-.blog .single-blog .blog-author{
+.blog .single-blog .blog-author {
   border-top: 1px solid rgba(0, 0, 0, 0.04);
   display: flex;
   align-items: center;
@@ -1050,29 +929,29 @@ blog CSS
   overflow: hidden;
 }
 
-.blog .single-blog h4{
+.blog .single-blog h4 {
   font-size: 14px;
   font-weight: 600;
   color: var(--primary-text);
 }
 
-.blog .single-blog ul{
+.blog .single-blog ul {
   display: flex;
   align-items: center;
   gap: 24px;
 }
 
-.blog .single-blog ul li{
+.blog .single-blog ul li {
   position: relative;
 }
 
-.blog .single-blog ul li small{
+.blog .single-blog ul li small {
   display: inline-block;
   font-size: 12px;
   color: rgba(13, 13, 14, 0.4);
 }
 
-.blog .single-blog ul li:not(:first-child)::before{
+.blog .single-blog ul li:not(:first-child)::before {
   content: '.';
   font-size: 28px;
   line-height: 18px;
@@ -1082,11 +961,11 @@ blog CSS
   left: -12px;
 }
 
-.blog-pagination.swiper-pagination{
+.blog-pagination.swiper-pagination {
   bottom: 0;
 }
 
-.blog-pagination .swiper-pagination-bullet{
+.blog-pagination .swiper-pagination-bullet {
   margin: 0 8px;
   height: 12px;
   width: 12px;
@@ -1103,7 +982,7 @@ blog CSS
 }
 
 @media screen and (max-width: 767px) {
-  .blog .single-blog{
+  .blog .single-blog {
     padding: 16px 12px;
   }
 

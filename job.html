@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+  <title>Job Portal | Home</title>
+  <script src="https://unpkg.com/phosphor-icons"></script>
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/select2.min.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/filter.css">
+  <link rel="stylesheet" href="assets/css/job.css">
+</head>
+
+<body>
+  <!-- header start -->
+  <header class="menubar" id="menubar">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.png" alt="Logo">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.9375 5H14.0625" stroke="#0075C8" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+                    <path d="M3.125 10H16.875" stroke="#0075C8" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+                    <path d="M5.9375 15H14.0625" stroke="#0075C8" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+                    </svg>                    
+                </span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="job.html">Find a job</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Recruiters</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav right-nav">
+                  <li>
+                    <a href="#" class="animate-btn animate-btn-outline register-btn">Register</a>
+                  </li>
+                  <li>
+                    <a href="#" class="animate-btn animate-btn-fill login-btn">Login</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <!-- main start -->
+  <main>
+    <!-- job-banner start -->
+    <section class="job-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-10 offset-xl-1">
+            <div class="text-center">
+              <small class="explore">Explore thousands of jobs in one place and get the job of your dream</small>
+              <h1><span>120</span> New <span class="job">Job</span> is Available Now</h1>
+            </div>
+
+            <div class="filter-job">
+              <div class="row">
+
+                <!-- industry -->
+                <div class="col-md-6 col-lg-2">
+                  <div class="single-category">
+                    <div class="d-flex align-items-center category-heading">
+                      <div class="d-flex align-items-center">
+                        <img src="assets/images/svg/suitcase-grey.svg" alt="Icon">
+                        <small>Industry</small>
+                      </div>
+                      <span class="icon">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.61405 8.61203L7.06739 12.0654C7.58739 12.5854 8.42739 12.5854 8.94739 12.0654L12.4007 8.61203C13.2407 7.77203 12.6407 6.33203 11.4541 6.33203H4.54739C3.36072 6.33203 2.77405 7.77203 3.61405 8.61203Z" fill="#070707"/>
+                        </svg>
+                      </span>
+                    </div>
+
+                    <select class="filter-select" id="industry-select">
+                      <option value="1">Android</option>
+                      <option value="2">Accounting</option>
+                      <option value="3">UX/UI Designer</option>
+                      <option value="4">Fintech</option>
+                      <option value="5">Front-end</option>
+                      <option value="6">Back-end</option>
+                      <option value="7">IOS</option>
+                      <option value="8">Sound</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Location -->
+                <div class="col-md-6 col-lg-2">
+                  <div class="single-category">
+                    <div class="d-flex align-items-center category-heading">
+                      <div class="d-flex align-items-center">
+                        <img src="assets/images/svg/map-trifold.svg" alt="Icon">
+                        <small>Location</small>
+                      </div>
+                      <span class="icon">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.61405 8.61203L7.06739 12.0654C7.58739 12.5854 8.42739 12.5854 8.94739 12.0654L12.4007 8.61203C13.2407 7.77203 12.6407 6.33203 11.4541 6.33203H4.54739C3.36072 6.33203 2.77405 7.77203 3.61405 8.61203Z" fill="#070707"/>
+                        </svg>
+                      </span>
+                    </div>
+
+                    <select class="filter-select" id="location-select">
+                      <option value="1">California, USA</option>
+                      <option value="2">Alabama, USA</option>
+                      <option value="3">Alaska</option>
+                      <option value="4">Colorado</option>
+                      <option value="5">Florida</option>
+                      <option value="6">Georgia</option>
+                      <option value="7">Indiana</option>
+                      <option value="8">Louisiana</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- keywords -->
+                <div class="col-md-6 col-lg-5">
+                  <div class="single-category keywords">
+                    <div class="d-flex align-items-center category-heading">
+                      <img src="assets/images/svg/pencil-line.svg" alt="Icon">
+                      <small>Your Keyword...</small>
+                    </div>
+                    <input type="text" placeholder="ui, ux, user interface, graphics" value="ui, ux, user interface, graphics">
+                  </div>
+                </div>
+
+                <!-- search button -->
+                <div class="col-md-6 col-lg-3">
+                  <div class="search-btn-main">
+                    <button type="button" class="animate-btn animate-btn-fill search-btn">
+                      <i class="ph-magnifying-glass"></i>
+                      Search
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <p class="popular-search"><span>Popular Searches:</span> Designer,  Web, IOS, Developer, PHP, Senior, Engineer,</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- job-banner end -->
+
+    <!-- all-job start -->
+    <section class="all-job section-gap">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- page count -->
+            <div class="page-count">
+              <p>Showing <span>01-09</span> of <span>44 </span> jobs</p>
+            </div>
+
+            <!-- filter-container -->
+            <div class="filter-container">
+              <ul class="job-category-buttons scrollbar-hidden job-cat-btns">
+                <li class="active">
+                  <button type="button" class="animate-btn animate-btn-outline" data-filter="all">All</button>
+                </li>
+                <li>
+                  <button type="button" class="animate-btn animate-btn-outline" data-filter=".popular">Popular</button>
+                </li>
+                <li>
+                  <button type="button" class="animate-btn animate-btn-outline" data-filter=".recent">Recent</button>
+                </li>
+                <li>
+                  <button type="button" class="animate-btn animate-btn-outline" data-filter=".near">Near</button>
+                </li>
+              </ul>
+
+              <div class="position-relative">
+                <button type="button" class="filter-button" data-bs-toggle="collapse" href="#collapse-advance-filter" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  <i class="ph-sliders-horizontal"></i>
+                  Filter
+                </button>
+                <div class="advance-filter collapse" id="collapse-advance-filter">
+                  <h3 class="filter-title">Advance filter</h3>
+
+                  <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <!-- item 1 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-headingIndustry">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-industry" aria-expanded="true" aria-controls="panelsStayOpen-industry">
+                          Industry
+                        </button>
+                      </h2>
+                      <div id="panelsStayOpen-industry" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingIndustry">
+                        <div class="accordion-body">
+                          <div class="industry filter-body">
+                            <label class="position-relative input-search-label">
+                              <input type="text" placeholder="search" class="input-search">
+                              <i class="ph-magnifying-glass"></i>
+                            </label>
+  
+                            <ul class="custom-scrollbar">
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                  <p><span>All</span><span>237</span></p>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox" checked>
+                                  <span class="checkmark"></span>
+                                  <p><span>Software</span><span>3</span></p>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                  <p><span>Finance</span><span>23</span></p>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                  <p><span>Recruiting</span><span>9</span></p>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                  <p><span>Management</span><span>37</span></p>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                  <p><span>Executive</span><span>43</span></p>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                  <p><span>Graphics</span><span>33</span></p>
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- item 2 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-headingSalary">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-salary" aria-expanded="false" aria-controls="panelsStayOpen-salary">
+                          Salary Range
+                        </button>
+                      </h2>
+                      <div id="panelsStayOpen-salary" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSalary">
+                        <div class="accordion-body">
+                          <div class="salary">
+                            <!-- <input type="text" readonly> -->
+                            <div id="slider-range" class="slider"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- item 3 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-headingPosition">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-position" aria-expanded="false" aria-controls="panelsStayOpen-position">
+                          Position
+                        </button>
+                      </h2>
+                      <div id="panelsStayOpen-position" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingPosition">
+                        <div class="accordion-body">
+                          <div class="position filter-body">
+                            <ul class="custom-scrollbar">
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                  <p>Senior</p>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox" checked>
+                                  <span class="checkmark"></span>
+                                  <p>Junior</p>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                  <p>Fresher</p>
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- item 4 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-headingExperience">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-experience" aria-expanded="false" aria-controls="panelsStayOpen-experience">
+                          Experience Level
+                        </button>
+                      </h2>
+                      <div id="panelsStayOpen-experience" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingExperience">
+                        <div class="accordion-body">
+                          <div class="experience filter-body">  
+                            <ul class="custom-scrollbar">
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                  <p><span>Internship</span><span>237</span></p>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox" checked>
+                                  <span class="checkmark"></span>
+                                  <p><span>Entry Level</span><span>3</span></p>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                  <p><span>Associate</span><span>23</span></p>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                  <p><span>Mid Level</span><span>9</span></p>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                  <p><span>Director</span><span>37</span></p>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                  <p><span>Executive</span><span>43</span></p>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                  <p><span>Senior Executive</span><span>33</span></p>
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- item 5 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-headingJob">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-job" aria-expanded="false" aria-controls="panelsStayOpen-job">
+                          Job type
+                        </button>
+                      </h2>
+                      <div id="panelsStayOpen-job" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingJob">
+                        <div class="accordion-body">
+                          <div class="job filter-body">
+                            <ul class="custom-scrollbar">
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                  <p><span>Part time</span><span>237</span></p>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox" checked>
+                                  <span class="checkmark"></span>
+                                  <p><span>Full time</span><span>3</span></p>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                  <p><span>Remote Jobs</span><span>23</span></p>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                  <p><span>Frelancer</span><span>9</span></p>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                  <p><span>Office</span><span>37</span></p>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                  <p><span>Weekly</span><span>43</span></p>
+                                </label>
+                              </li>
+                              <li>
+                                <label class="check-container">
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                  <p><span>Contractual</span><span>33</span></p>
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- job cards -->
+            <div class="row row-gutter" id="all-job-grid-container">
+              <!-- job 1 -->
+              <div class="col-md-6 col-lg-4 mix popular">
+                <div class="single-job">
+
+                  <!-- card title -->
+                  <div class="d-flex align-items-center card-title">
+                    <div class="icon">
+                      <img src="assets/images/svg/tbde.svg" alt="Icon">
+                    </div>
+                    <div>
+                      <h3>Infrastructure Development Company Limited (IDCOL)</h3>
+                      <span>
+                        <img src="assets/images/svg/map-trifold.svg" alt="Icon">
+                        New York, USA
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- job description -->
+                  <div class="job-title">
+                    <h4>UI/UX Designer Fultime</h4>
+                    <ul class="d-flex align-items-center">
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M17.5 12.5V16.25C17.5 16.4158 17.4342 16.5747 17.3169 16.6919C17.1997 16.8092 17.0408 16.875 16.875 16.875H3.125C2.95924 16.875 2.80027 16.8092 2.68306 16.6919C2.56585 16.5747 2.5 16.4158 2.5 16.25V12.5" fill="#0075C8"/>
+                          <path d="M16.875 5.625H3.125C2.77982 5.625 2.5 5.90482 2.5 6.25V16.25C2.5 16.5952 2.77982 16.875 3.125 16.875H16.875C17.2202 16.875 17.5 16.5952 17.5 16.25V6.25C17.5 5.90482 17.2202 5.625 16.875 5.625Z" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M13.125 5.625V4.375C13.125 4.04348 12.9933 3.72554 12.7589 3.49112C12.5245 3.2567 12.2065 3.125 11.875 3.125H8.125C7.79348 3.125 7.47554 3.2567 7.24112 3.49112C7.0067 3.72554 6.875 4.04348 6.875 4.375V5.625" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M2.5 12.5H17.5" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        Full time
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" fill="#0075C8"/>
+                          <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#0075C8" stroke-width="1.5" stroke-miterlimit="10"/>
+                          <path d="M10 5.625V10H14.375" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        1 h ago
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p class="desc">Lorem ipsum dolor sit amet consectetur. Urna ultrices leo amet lobortis nisl vel eu dapibus a. Sit mauris scelerisque maecenas at sit at arcu imperdiet....</p>
+                  <ul class="d-flex align-items-center tags">
+                    <li><a href="#!">XD</a></li>
+                    <li><a href="#!">Figma</a></li>
+                    <li><a href="#!">Photoshop</a></li>
+                  </ul>
+
+                  <div class="card-footer d-flex align-items-center justify-content-between">
+                    <button type="button">Apply now</button>
+                    <p>$250 <span>/Hour</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- job 2 -->
+              <div class="col-md-6 col-lg-4 mix recent">
+                <div class="single-job">
+
+                  <!-- card title -->
+                  <div class="d-flex align-items-center card-title">
+                    <div class="icon">
+                      <img src="assets/images/svg/tbde.svg" alt="Icon">
+                    </div>
+                    <div>
+                      <h3>Infrastructure Development Company Limited (IDCOL)</h3>
+                      <span>
+                        <img src="assets/images/svg/map-trifold.svg" alt="Icon">
+                        New York, USA
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- job description -->
+                  <div class="job-title">
+                    <h4>UI/UX Designer Fultime</h4>
+                    <ul class="d-flex align-items-center">
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M17.5 12.5V16.25C17.5 16.4158 17.4342 16.5747 17.3169 16.6919C17.1997 16.8092 17.0408 16.875 16.875 16.875H3.125C2.95924 16.875 2.80027 16.8092 2.68306 16.6919C2.56585 16.5747 2.5 16.4158 2.5 16.25V12.5" fill="#0075C8"/>
+                          <path d="M16.875 5.625H3.125C2.77982 5.625 2.5 5.90482 2.5 6.25V16.25C2.5 16.5952 2.77982 16.875 3.125 16.875H16.875C17.2202 16.875 17.5 16.5952 17.5 16.25V6.25C17.5 5.90482 17.2202 5.625 16.875 5.625Z" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M13.125 5.625V4.375C13.125 4.04348 12.9933 3.72554 12.7589 3.49112C12.5245 3.2567 12.2065 3.125 11.875 3.125H8.125C7.79348 3.125 7.47554 3.2567 7.24112 3.49112C7.0067 3.72554 6.875 4.04348 6.875 4.375V5.625" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M2.5 12.5H17.5" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        Full time
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" fill="#0075C8"/>
+                          <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#0075C8" stroke-width="1.5" stroke-miterlimit="10"/>
+                          <path d="M10 5.625V10H14.375" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        1 h ago
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p class="desc">Lorem ipsum dolor sit amet consectetur. Urna ultrices leo amet lobortis nisl vel eu dapibus a. Sit mauris scelerisque maecenas at sit at arcu imperdiet....</p>
+                  <ul class="d-flex align-items-center tags">
+                    <li><a href="#!">XD</a></li>
+                    <li><a href="#!">Figma</a></li>
+                    <li><a href="#!">Photoshop</a></li>
+                  </ul>
+
+                  <div class="card-footer d-flex align-items-center justify-content-between">
+                    <button type="button">Apply now</button>
+                    <p>$250 <span>/Hour</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- job 3 -->
+              <div class="col-md-6 col-lg-4 mix near">
+                <div class="single-job">
+
+                  <!-- card title -->
+                  <div class="d-flex align-items-center card-title">
+                    <div class="icon">
+                      <img src="assets/images/svg/bysl.svg" alt="Icon">
+                    </div>
+                    <div>
+                      <h3>BYSL Global Technology LTD</h3>
+                      <span>
+                        <img src="assets/images/svg/map-trifold.svg" alt="Icon">
+                        New York, USA
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- job description -->
+                  <div class="job-title">
+                    <h4>UI/UX Designer Fultime</h4>
+                    <ul class="d-flex align-items-center">
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M17.5 12.5V16.25C17.5 16.4158 17.4342 16.5747 17.3169 16.6919C17.1997 16.8092 17.0408 16.875 16.875 16.875H3.125C2.95924 16.875 2.80027 16.8092 2.68306 16.6919C2.56585 16.5747 2.5 16.4158 2.5 16.25V12.5" fill="#0075C8"/>
+                          <path d="M16.875 5.625H3.125C2.77982 5.625 2.5 5.90482 2.5 6.25V16.25C2.5 16.5952 2.77982 16.875 3.125 16.875H16.875C17.2202 16.875 17.5 16.5952 17.5 16.25V6.25C17.5 5.90482 17.2202 5.625 16.875 5.625Z" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M13.125 5.625V4.375C13.125 4.04348 12.9933 3.72554 12.7589 3.49112C12.5245 3.2567 12.2065 3.125 11.875 3.125H8.125C7.79348 3.125 7.47554 3.2567 7.24112 3.49112C7.0067 3.72554 6.875 4.04348 6.875 4.375V5.625" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M2.5 12.5H17.5" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        Full time
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" fill="#0075C8"/>
+                          <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#0075C8" stroke-width="1.5" stroke-miterlimit="10"/>
+                          <path d="M10 5.625V10H14.375" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        1 h ago
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p class="desc">Lorem ipsum dolor sit amet consectetur. Urna ultrices leo amet lobortis nisl vel eu dapibus a. Sit mauris scelerisque maecenas at sit at arcu imperdiet....</p>
+                  <ul class="d-flex align-items-center tags">
+                    <li><a href="#!">XD</a></li>
+                    <li><a href="#!">Figma</a></li>
+                    <li><a href="#!">Photoshop</a></li>
+                  </ul>
+
+                  <div class="card-footer d-flex align-items-center justify-content-between">
+                    <button type="button">Apply now</button>
+                    <p>$250 <span>/Hour</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- job 4 -->
+              <div class="col-md-6 col-lg-4 mix popular">
+                <div class="single-job">
+
+                  <!-- card title -->
+                  <div class="d-flex align-items-center card-title">
+                    <div class="icon">
+                      <img src="assets/images/svg/fanta.svg" alt="Icon">
+                    </div>
+                    <div>
+                      <h3>Fanta Development Technology LTD</h3>
+                      <span>
+                        <img src="assets/images/svg/map-trifold.svg" alt="Icon">
+                        New York, USA
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- job description -->
+                  <div class="job-title">
+                    <h4>UI/UX Designer Fultime</h4>
+                    <ul class="d-flex align-items-center">
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M17.5 12.5V16.25C17.5 16.4158 17.4342 16.5747 17.3169 16.6919C17.1997 16.8092 17.0408 16.875 16.875 16.875H3.125C2.95924 16.875 2.80027 16.8092 2.68306 16.6919C2.56585 16.5747 2.5 16.4158 2.5 16.25V12.5" fill="#0075C8"/>
+                          <path d="M16.875 5.625H3.125C2.77982 5.625 2.5 5.90482 2.5 6.25V16.25C2.5 16.5952 2.77982 16.875 3.125 16.875H16.875C17.2202 16.875 17.5 16.5952 17.5 16.25V6.25C17.5 5.90482 17.2202 5.625 16.875 5.625Z" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M13.125 5.625V4.375C13.125 4.04348 12.9933 3.72554 12.7589 3.49112C12.5245 3.2567 12.2065 3.125 11.875 3.125H8.125C7.79348 3.125 7.47554 3.2567 7.24112 3.49112C7.0067 3.72554 6.875 4.04348 6.875 4.375V5.625" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M2.5 12.5H17.5" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        Full time
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" fill="#0075C8"/>
+                          <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#0075C8" stroke-width="1.5" stroke-miterlimit="10"/>
+                          <path d="M10 5.625V10H14.375" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        1 h ago
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p class="desc">Lorem ipsum dolor sit amet consectetur. Urna ultrices leo amet lobortis nisl vel eu dapibus a. Sit mauris scelerisque maecenas at sit at arcu imperdiet....</p>
+                  <ul class="d-flex align-items-center tags">
+                    <li><a href="#!">XD</a></li>
+                    <li><a href="#!">Figma</a></li>
+                    <li><a href="#!">Photoshop</a></li>
+                  </ul>
+
+                  <div class="card-footer d-flex align-items-center justify-content-between">
+                    <button type="button">Apply now</button>
+                    <p>$250 <span>/Hour</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- job 5 -->
+              <div class="col-md-6 col-lg-4 mix recent">
+                <div class="single-job">
+
+                  <!-- card title -->
+                  <div class="d-flex align-items-center card-title">
+                    <div class="icon">
+                      <img src="assets/images/svg/idcol.svg" alt="Icon">
+                    </div>
+                    <div>
+                      <h3>Infrastructure Development Company Limited (IDCOL)</h3>
+                      <span>
+                        <img src="assets/images/svg/map-trifold.svg" alt="Icon">
+                        New York, USA
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- job description -->
+                  <div class="job-title">
+                    <h4>UI/UX Designer Fultime</h4>
+                    <ul class="d-flex align-items-center">
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M17.5 12.5V16.25C17.5 16.4158 17.4342 16.5747 17.3169 16.6919C17.1997 16.8092 17.0408 16.875 16.875 16.875H3.125C2.95924 16.875 2.80027 16.8092 2.68306 16.6919C2.56585 16.5747 2.5 16.4158 2.5 16.25V12.5" fill="#0075C8"/>
+                          <path d="M16.875 5.625H3.125C2.77982 5.625 2.5 5.90482 2.5 6.25V16.25C2.5 16.5952 2.77982 16.875 3.125 16.875H16.875C17.2202 16.875 17.5 16.5952 17.5 16.25V6.25C17.5 5.90482 17.2202 5.625 16.875 5.625Z" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M13.125 5.625V4.375C13.125 4.04348 12.9933 3.72554 12.7589 3.49112C12.5245 3.2567 12.2065 3.125 11.875 3.125H8.125C7.79348 3.125 7.47554 3.2567 7.24112 3.49112C7.0067 3.72554 6.875 4.04348 6.875 4.375V5.625" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M2.5 12.5H17.5" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        Full time
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" fill="#0075C8"/>
+                          <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#0075C8" stroke-width="1.5" stroke-miterlimit="10"/>
+                          <path d="M10 5.625V10H14.375" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        1 h ago
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p class="desc">Lorem ipsum dolor sit amet consectetur. Urna ultrices leo amet lobortis nisl vel eu dapibus a. Sit mauris scelerisque maecenas at sit at arcu imperdiet....</p>
+                  <ul class="d-flex align-items-center tags">
+                    <li><a href="#!">XD</a></li>
+                    <li><a href="#!">Figma</a></li>
+                    <li><a href="#!">Photoshop</a></li>
+                  </ul>
+
+                  <div class="card-footer d-flex align-items-center justify-content-between">
+                    <button type="button">Apply now</button>
+                    <p>$250 <span>/Hour</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- job 6 -->
+              <div class="col-md-6 col-lg-4 mix near">
+                <div class="single-job">
+
+                  <!-- card title -->
+                  <div class="d-flex align-items-center card-title">
+                    <div class="icon">
+                      <img src="assets/images/svg/audi.svg" alt="Icon">
+                    </div>
+                    <div>
+                      <h3>Audi Development Technology LTD</h3>
+                      <span>
+                        <img src="assets/images/svg/map-trifold.svg" alt="Icon">
+                        New York, USA
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- job description -->
+                  <div class="job-title">
+                    <h4>UI/UX Designer Fultime</h4>
+                    <ul class="d-flex align-items-center">
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M17.5 12.5V16.25C17.5 16.4158 17.4342 16.5747 17.3169 16.6919C17.1997 16.8092 17.0408 16.875 16.875 16.875H3.125C2.95924 16.875 2.80027 16.8092 2.68306 16.6919C2.56585 16.5747 2.5 16.4158 2.5 16.25V12.5" fill="#0075C8"/>
+                          <path d="M16.875 5.625H3.125C2.77982 5.625 2.5 5.90482 2.5 6.25V16.25C2.5 16.5952 2.77982 16.875 3.125 16.875H16.875C17.2202 16.875 17.5 16.5952 17.5 16.25V6.25C17.5 5.90482 17.2202 5.625 16.875 5.625Z" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M13.125 5.625V4.375C13.125 4.04348 12.9933 3.72554 12.7589 3.49112C12.5245 3.2567 12.2065 3.125 11.875 3.125H8.125C7.79348 3.125 7.47554 3.2567 7.24112 3.49112C7.0067 3.72554 6.875 4.04348 6.875 4.375V5.625" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M2.5 12.5H17.5" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        Full time
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" fill="#0075C8"/>
+                          <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#0075C8" stroke-width="1.5" stroke-miterlimit="10"/>
+                          <path d="M10 5.625V10H14.375" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        1 h ago
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p class="desc">Lorem ipsum dolor sit amet consectetur. Urna ultrices leo amet lobortis nisl vel eu dapibus a. Sit mauris scelerisque maecenas at sit at arcu imperdiet....</p>
+                  <ul class="d-flex align-items-center tags">
+                    <li><a href="#!">XD</a></li>
+                    <li><a href="#!">Figma</a></li>
+                    <li><a href="#!">Photoshop</a></li>
+                  </ul>
+
+                  <div class="card-footer d-flex align-items-center justify-content-between">
+                    <button type="button">Apply now</button>
+                    <p>$250 <span>/Hour</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- job 7 -->
+              <div class="col-md-6 col-lg-4 mix popular">
+                <div class="single-job">
+
+                  <!-- card title -->
+                  <div class="d-flex align-items-center card-title">
+                    <div class="icon">
+                      <img src="assets/images/svg/tbde.svg" alt="Icon">
+                    </div>
+                    <div>
+                      <h3>Infrastructure Development Company Limited (IDCOL)</h3>
+                      <span>
+                        <img src="assets/images/svg/map-trifold.svg" alt="Icon">
+                        New York, USA
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- job description -->
+                  <div class="job-title">
+                    <h4>UI/UX Designer Fultime</h4>
+                    <ul class="d-flex align-items-center">
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M17.5 12.5V16.25C17.5 16.4158 17.4342 16.5747 17.3169 16.6919C17.1997 16.8092 17.0408 16.875 16.875 16.875H3.125C2.95924 16.875 2.80027 16.8092 2.68306 16.6919C2.56585 16.5747 2.5 16.4158 2.5 16.25V12.5" fill="#0075C8"/>
+                          <path d="M16.875 5.625H3.125C2.77982 5.625 2.5 5.90482 2.5 6.25V16.25C2.5 16.5952 2.77982 16.875 3.125 16.875H16.875C17.2202 16.875 17.5 16.5952 17.5 16.25V6.25C17.5 5.90482 17.2202 5.625 16.875 5.625Z" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M13.125 5.625V4.375C13.125 4.04348 12.9933 3.72554 12.7589 3.49112C12.5245 3.2567 12.2065 3.125 11.875 3.125H8.125C7.79348 3.125 7.47554 3.2567 7.24112 3.49112C7.0067 3.72554 6.875 4.04348 6.875 4.375V5.625" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M2.5 12.5H17.5" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        Full time
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" fill="#0075C8"/>
+                          <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#0075C8" stroke-width="1.5" stroke-miterlimit="10"/>
+                          <path d="M10 5.625V10H14.375" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        1 h ago
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p class="desc">Lorem ipsum dolor sit amet consectetur. Urna ultrices leo amet lobortis nisl vel eu dapibus a. Sit mauris scelerisque maecenas at sit at arcu imperdiet....</p>
+                  <ul class="d-flex align-items-center tags">
+                    <li><a href="#!">XD</a></li>
+                    <li><a href="#!">Figma</a></li>
+                    <li><a href="#!">Photoshop</a></li>
+                  </ul>
+
+                  <div class="card-footer d-flex align-items-center justify-content-between">
+                    <button type="button">Apply now</button>
+                    <p>$250 <span>/Hour</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- job 8 -->
+              <div class="col-md-6 col-lg-4 mix recent">
+                <div class="single-job">
+
+                  <!-- card title -->
+                  <div class="d-flex align-items-center card-title">
+                    <div class="icon">
+                      <img src="assets/images/svg/bysl.svg" alt="Icon">
+                    </div>
+                    <div>
+                      <h3>BYSL Global Technology LTD</h3>
+                      <span>
+                        <img src="assets/images/svg/map-trifold.svg" alt="Icon">
+                        New York, USA
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- job description -->
+                  <div class="job-title">
+                    <h4>UI/UX Designer Fultime</h4>
+                    <ul class="d-flex align-items-center">
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M17.5 12.5V16.25C17.5 16.4158 17.4342 16.5747 17.3169 16.6919C17.1997 16.8092 17.0408 16.875 16.875 16.875H3.125C2.95924 16.875 2.80027 16.8092 2.68306 16.6919C2.56585 16.5747 2.5 16.4158 2.5 16.25V12.5" fill="#0075C8"/>
+                          <path d="M16.875 5.625H3.125C2.77982 5.625 2.5 5.90482 2.5 6.25V16.25C2.5 16.5952 2.77982 16.875 3.125 16.875H16.875C17.2202 16.875 17.5 16.5952 17.5 16.25V6.25C17.5 5.90482 17.2202 5.625 16.875 5.625Z" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M13.125 5.625V4.375C13.125 4.04348 12.9933 3.72554 12.7589 3.49112C12.5245 3.2567 12.2065 3.125 11.875 3.125H8.125C7.79348 3.125 7.47554 3.2567 7.24112 3.49112C7.0067 3.72554 6.875 4.04348 6.875 4.375V5.625" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M2.5 12.5H17.5" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        Full time
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" fill="#0075C8"/>
+                          <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#0075C8" stroke-width="1.5" stroke-miterlimit="10"/>
+                          <path d="M10 5.625V10H14.375" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        1 h ago
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p class="desc">Lorem ipsum dolor sit amet consectetur. Urna ultrices leo amet lobortis nisl vel eu dapibus a. Sit mauris scelerisque maecenas at sit at arcu imperdiet....</p>
+                  <ul class="d-flex align-items-center tags">
+                    <li><a href="#!">XD</a></li>
+                    <li><a href="#!">Figma</a></li>
+                    <li><a href="#!">Photoshop</a></li>
+                  </ul>
+
+                  <div class="card-footer d-flex align-items-center justify-content-between">
+                    <button type="button">Apply now</button>
+                    <p>$250 <span>/Hour</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- job 9 -->
+              <div class="col-md-6 col-lg-4 mix near">
+                <div class="single-job">
+
+                  <!-- card title -->
+                  <div class="d-flex align-items-center card-title">
+                    <div class="icon">
+                      <img src="assets/images/svg/audi.svg" alt="Icon">
+                    </div>
+                    <div>
+                      <h3>Audi Development Technology LTD</h3>
+                      <span>
+                        <img src="assets/images/svg/map-trifold.svg" alt="Icon">
+                        New York, USA
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- job description -->
+                  <div class="job-title">
+                    <h4>UI/UX Designer Fultime</h4>
+                    <ul class="d-flex align-items-center">
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M17.5 12.5V16.25C17.5 16.4158 17.4342 16.5747 17.3169 16.6919C17.1997 16.8092 17.0408 16.875 16.875 16.875H3.125C2.95924 16.875 2.80027 16.8092 2.68306 16.6919C2.56585 16.5747 2.5 16.4158 2.5 16.25V12.5" fill="#0075C8"/>
+                          <path d="M16.875 5.625H3.125C2.77982 5.625 2.5 5.90482 2.5 6.25V16.25C2.5 16.5952 2.77982 16.875 3.125 16.875H16.875C17.2202 16.875 17.5 16.5952 17.5 16.25V6.25C17.5 5.90482 17.2202 5.625 16.875 5.625Z" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M13.125 5.625V4.375C13.125 4.04348 12.9933 3.72554 12.7589 3.49112C12.5245 3.2567 12.2065 3.125 11.875 3.125H8.125C7.79348 3.125 7.47554 3.2567 7.24112 3.49112C7.0067 3.72554 6.875 4.04348 6.875 4.375V5.625" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M2.5 12.5H17.5" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        Full time
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" fill="#0075C8"/>
+                          <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#0075C8" stroke-width="1.5" stroke-miterlimit="10"/>
+                          <path d="M10 5.625V10H14.375" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        1 h ago
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p class="desc">Lorem ipsum dolor sit amet consectetur. Urna ultrices leo amet lobortis nisl vel eu dapibus a. Sit mauris scelerisque maecenas at sit at arcu imperdiet....</p>
+                  <ul class="d-flex align-items-center tags">
+                    <li><a href="#!">XD</a></li>
+                    <li><a href="#!">Figma</a></li>
+                    <li><a href="#!">Photoshop</a></li>
+                  </ul>
+
+                  <div class="card-footer d-flex align-items-center justify-content-between">
+                    <button type="button">Apply now</button>
+                    <p>$250 <span>/Hour</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- job 10 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="single-job">
+
+                  <!-- card title -->
+                  <div class="d-flex align-items-center card-title">
+                    <div class="icon">
+                      <img src="assets/images/svg/bysl.svg" alt="Icon">
+                    </div>
+                    <div>
+                      <h3>BYSL Global Technology LTD</h3>
+                      <span>
+                        <img src="assets/images/svg/map-trifold.svg" alt="Icon">
+                        New York, USA
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- job description -->
+                  <div class="job-title">
+                    <h4>UI/UX Designer Fultime</h4>
+                    <ul class="d-flex align-items-center">
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M17.5 12.5V16.25C17.5 16.4158 17.4342 16.5747 17.3169 16.6919C17.1997 16.8092 17.0408 16.875 16.875 16.875H3.125C2.95924 16.875 2.80027 16.8092 2.68306 16.6919C2.56585 16.5747 2.5 16.4158 2.5 16.25V12.5" fill="#0075C8"/>
+                          <path d="M16.875 5.625H3.125C2.77982 5.625 2.5 5.90482 2.5 6.25V16.25C2.5 16.5952 2.77982 16.875 3.125 16.875H16.875C17.2202 16.875 17.5 16.5952 17.5 16.25V6.25C17.5 5.90482 17.2202 5.625 16.875 5.625Z" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M13.125 5.625V4.375C13.125 4.04348 12.9933 3.72554 12.7589 3.49112C12.5245 3.2567 12.2065 3.125 11.875 3.125H8.125C7.79348 3.125 7.47554 3.2567 7.24112 3.49112C7.0067 3.72554 6.875 4.04348 6.875 4.375V5.625" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M2.5 12.5H17.5" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        Full time
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" fill="#0075C8"/>
+                          <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#0075C8" stroke-width="1.5" stroke-miterlimit="10"/>
+                          <path d="M10 5.625V10H14.375" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        1 h ago
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p class="desc">Lorem ipsum dolor sit amet consectetur. Urna ultrices leo amet lobortis nisl vel eu dapibus a. Sit mauris scelerisque maecenas at sit at arcu imperdiet....</p>
+                  <ul class="d-flex align-items-center tags">
+                    <li><a href="#!">XD</a></li>
+                    <li><a href="#!">Figma</a></li>
+                    <li><a href="#!">Photoshop</a></li>
+                  </ul>
+
+                  <div class="card-footer d-flex align-items-center justify-content-between">
+                    <button type="button">Apply now</button>
+                    <p>$250 <span>/Hour</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- job 11 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="single-job">
+
+                  <!-- card title -->
+                  <div class="d-flex align-items-center card-title">
+                    <div class="icon">
+                      <img src="assets/images/svg/idcol.svg" alt="Icon">
+                    </div>
+                    <div>
+                      <h3>Infrastructure Development Company Limited (IDCOL)</h3>
+                      <span>
+                        <img src="assets/images/svg/map-trifold.svg" alt="Icon">
+                        New York, USA
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- job description -->
+                  <div class="job-title">
+                    <h4>UI/UX Designer Fultime</h4>
+                    <ul class="d-flex align-items-center">
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M17.5 12.5V16.25C17.5 16.4158 17.4342 16.5747 17.3169 16.6919C17.1997 16.8092 17.0408 16.875 16.875 16.875H3.125C2.95924 16.875 2.80027 16.8092 2.68306 16.6919C2.56585 16.5747 2.5 16.4158 2.5 16.25V12.5" fill="#0075C8"/>
+                          <path d="M16.875 5.625H3.125C2.77982 5.625 2.5 5.90482 2.5 6.25V16.25C2.5 16.5952 2.77982 16.875 3.125 16.875H16.875C17.2202 16.875 17.5 16.5952 17.5 16.25V6.25C17.5 5.90482 17.2202 5.625 16.875 5.625Z" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M13.125 5.625V4.375C13.125 4.04348 12.9933 3.72554 12.7589 3.49112C12.5245 3.2567 12.2065 3.125 11.875 3.125H8.125C7.79348 3.125 7.47554 3.2567 7.24112 3.49112C7.0067 3.72554 6.875 4.04348 6.875 4.375V5.625" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M2.5 12.5H17.5" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        Full time
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" fill="#0075C8"/>
+                          <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#0075C8" stroke-width="1.5" stroke-miterlimit="10"/>
+                          <path d="M10 5.625V10H14.375" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        1 h ago
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p class="desc">Lorem ipsum dolor sit amet consectetur. Urna ultrices leo amet lobortis nisl vel eu dapibus a. Sit mauris scelerisque maecenas at sit at arcu imperdiet....</p>
+                  <ul class="d-flex align-items-center tags">
+                    <li><a href="#!">XD</a></li>
+                    <li><a href="#!">Figma</a></li>
+                    <li><a href="#!">Photoshop</a></li>
+                  </ul>
+
+                  <div class="card-footer d-flex align-items-center justify-content-between">
+                    <button type="button">Apply now</button>
+                    <p>$250 <span>/Hour</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- job 12 -->
+              <div class="col-md-6 col-lg-4">
+                <div class="single-job">
+
+                  <!-- card title -->
+                  <div class="d-flex align-items-center card-title">
+                    <div class="icon">
+                      <img src="assets/images/svg/pepsi.svg" alt="Icon">
+                    </div>
+                    <div>
+                      <h3>Pepsi Development Technology LTD</h3>
+                      <span>
+                        <img src="assets/images/svg/map-trifold.svg" alt="Icon">
+                        New York, USA
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- job description -->
+                  <div class="job-title">
+                    <h4>UI/UX Designer Fultime</h4>
+                    <ul class="d-flex align-items-center">
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M17.5 12.5V16.25C17.5 16.4158 17.4342 16.5747 17.3169 16.6919C17.1997 16.8092 17.0408 16.875 16.875 16.875H3.125C2.95924 16.875 2.80027 16.8092 2.68306 16.6919C2.56585 16.5747 2.5 16.4158 2.5 16.25V12.5" fill="#0075C8"/>
+                          <path d="M16.875 5.625H3.125C2.77982 5.625 2.5 5.90482 2.5 6.25V16.25C2.5 16.5952 2.77982 16.875 3.125 16.875H16.875C17.2202 16.875 17.5 16.5952 17.5 16.25V6.25C17.5 5.90482 17.2202 5.625 16.875 5.625Z" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M13.125 5.625V4.375C13.125 4.04348 12.9933 3.72554 12.7589 3.49112C12.5245 3.2567 12.2065 3.125 11.875 3.125H8.125C7.79348 3.125 7.47554 3.2567 7.24112 3.49112C7.0067 3.72554 6.875 4.04348 6.875 4.375V5.625" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M2.5 12.5H17.5" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        Full time
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.2" d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" fill="#0075C8"/>
+                          <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#0075C8" stroke-width="1.5" stroke-miterlimit="10"/>
+                          <path d="M10 5.625V10H14.375" stroke="#0075C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        1 h ago
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p class="desc">Lorem ipsum dolor sit amet consectetur. Urna ultrices leo amet lobortis nisl vel eu dapibus a. Sit mauris scelerisque maecenas at sit at arcu imperdiet....</p>
+                  <ul class="d-flex align-items-center tags">
+                    <li><a href="#!">XD</a></li>
+                    <li><a href="#!">Figma</a></li>
+                    <li><a href="#!">Photoshop</a></li>
+                  </ul>
+
+                  <div class="card-footer d-flex align-items-center justify-content-between">
+                    <button type="button">Apply now</button>
+                    <p>$250 <span>/Hour</span></p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- load more btn -->
+          <div class="col-lg-12">
+            <div class="load-more-main text-center">
+              <button type="button" class="animate-btn animate-btn-outline">Load more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- all-job end -->
+  </main>
+  <!-- main end -->
+
+  <!-- footer start -->
+  <footer>
+
+    <!-- footer-top start -->
+    <section class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-5">
+            <div class="footer-about">
+              <a href="#!" class="footer-logo">
+                <img src="assets/images/footer-logo.png" alt="Logo">
+              </a>
+              <p class="about-company">21 Job Interview Tips: How To Make a Great Impression.Our mission is to create the world&rsquos most sustainable healthcare company.</p>
+              <ul class="social">
+                <li>
+                  <a href="#!">
+                    <img src="assets/images/svg/fb.svg" alt="Facebook">
+                  </a>
+                </li>
+                <li>
+                  <a href="#!">
+                    <img src="assets/images/svg/yt.svg" alt="Youtube">
+                  </a>
+                </li>
+                <li>
+                  <a href="#!">
+                    <img src="assets/images/svg/dribbble.svg" alt="Dribbble">
+                  </a>
+                </li>
+                <li>
+                  <a href="#!">
+                    <img src="assets/images/svg/whatsapp.svg" alt="Whatsapp">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2 offset-lg-2">
+            <div class="footer-title">
+              <h4>Resources</h4>
+            </div>
+            <ul class="footer-links">
+              <li><a href="#!">Pricing</a></li>
+              <li><a href="#!">Find a job</a></li>
+              <li><a href="#!">Blog</a></li>
+              <li><a href="#!">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-3">
+            <div class="text-end">
+              <div class="footer-title">
+                <h4>More</h4>
+              </div>
+              <ul class="footer-links">
+                <li><a href="#!">Privacy</a></li>
+                <li><a href="#!">Term & Conditions</a></li>
+                <li><a href="#!">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer-top end -->
+
+    <!-- footer-bottom start -->
+    <section class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="copyright">
+              <img src="assets/images/svg/copyright-border-left.svg" alt="Border">
+              <p>Stay Hopeful, stay positive</p>
+              <img src="assets/images/svg/copyright-border-right.svg" alt="Border">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer-bottom end -->
+  </footer>
+  <!-- footer end -->
+  
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/jquery-3.6.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+  <script src="assets/js/select2.min.js"></script>
+  <script src="assets/js/jquery-ui.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/mixitup.min.js"></script>
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

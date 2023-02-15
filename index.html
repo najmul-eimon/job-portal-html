@@ -10,6 +10,7 @@
 
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/select2.min.css">
+  <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="assets/css/common.css">
   <link rel="stylesheet" href="assets/css/filter.css">
@@ -39,10 +40,10 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Find a job</a>
+                    <a class="nav-link" href="job.html">Find a job</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Recruiters</a>
@@ -77,9 +78,9 @@
     <section class="banner">
       <div class="container">
         <div class="row">
-          <div class="col-lg-10 offset-lg-1">
+          <div class="col-xl-10 offset-xl-1">
             <div class="text-center">
-              <small>Explore thousands of jobs in one place and get the job of your dream</small>
+              <small class="explore">Explore thousands of jobs in one place and get the job of your dream</small>
               <h1>The <span>Easiest</span> Way to Get Your <br> New Job</h1>
             </div>
 
@@ -91,7 +92,7 @@
                   <div class="single-category">
                     <div class="d-flex align-items-center category-heading">
                       <div class="d-flex align-items-center">
-                        <i class="ph-suitcase-simple"></i>
+                        <img src="assets/images/svg/suitcase-grey.svg" alt="Icon">
                         <small>Industry</small>
                       </div>
                       <span class="icon">
@@ -119,7 +120,7 @@
                   <div class="single-category">
                     <div class="d-flex align-items-center category-heading">
                       <div class="d-flex align-items-center">
-                        <i class="ph-map-trifold"></i>
+                        <img src="assets/images/svg/map-trifold.svg" alt="Icon">
                         <small>Location</small>
                       </div>
                       <span class="icon">
@@ -146,7 +147,7 @@
                 <div class="col-md-6 col-lg-5">
                   <div class="single-category keywords">
                     <div class="d-flex align-items-center category-heading">
-                      <i class="ph-pencil-simple-line"></i>
+                      <img src="assets/images/svg/pencil-line.svg" alt="Icon">
                       <small>Your Keyword...</small>
                     </div>
                     <input type="text" placeholder="ui, ux, user interface, graphics" value="ui, ux, user interface, graphics">
@@ -1422,40 +1423,40 @@
             <div class="swiper company-slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide item">
-                  <img src="assets/images/company/blvck.png" alt="">
+                  <img src="assets/images/company/blvck.svg" alt="">
                 </div>
                 <div class="swiper-slide item">
-                  <img src="assets/images/company/bysl.png" alt="">
+                  <img src="assets/images/company/bysl.svg" alt="">
                 </div>
                 <div class="swiper-slide item">
-                  <img src="assets/images/company/eversend.png" alt="">
+                  <img src="assets/images/company/eversend.svg" alt="">
                 </div>
                 <div class="swiper-slide item">
-                  <img src="assets/images/company/feedly.png" alt="">
+                  <img src="assets/images/company/feedly.svg" alt="">
                 </div>
                 <div class="swiper-slide item">
-                  <img src="assets/images/company/illiyeen.png" alt="">
+                  <img src="assets/images/company/illiyeen.svg" alt="">
                 </div>
                 <div class="swiper-slide item">
-                  <img src="assets/images/company/legends.png" alt="">
+                  <img src="assets/images/company/legends.svg" alt="">
                 </div>
                 <div class="swiper-slide item">
-                  <img src="assets/images/company/synckloud.png" alt="">
+                  <img src="assets/images/company/synckloud.svg" alt="">
                 </div>
                 <div class="swiper-slide item">
-                  <img src="assets/images/company/zomato.png" alt="">
+                  <img src="assets/images/company/zomato.svg" alt="">
                 </div>
                 <div class="swiper-slide item">
-                  <img src="assets/images/company/bysl.png" alt="">
+                  <img src="assets/images/company/bysl.svg" alt="">
                 </div>
                 <div class="swiper-slide item">
-                  <img src="assets/images/company/eversend.png" alt="">
+                  <img src="assets/images/company/eversend.svg" alt="">
                 </div>
                 <div class="swiper-slide item">
-                  <img src="assets/images/company/feedly.png" alt="">
+                  <img src="assets/images/company/feedly.svg" alt="">
                 </div>
                 <div class="swiper-slide item">
-                  <img src="assets/images/company/illiyeen.png" alt="">
+                  <img src="assets/images/company/illiyeen.svg" alt="">
                 </div>
               </div>
           </div>
@@ -1730,7 +1731,7 @@
               <p>We know the best solution for all of your business ideas and we can help you solve all business problems</p>
             </div>
 
-            <ul class="latest-job-category scrollbar-hidden">
+            <ul class="latest-job-category scrollbar-hidden job-cat-btns">
               <li class="active">
                 <button type="button" class="animate-btn animate-btn-outline" data-filter="all">All</button>
               </li>
@@ -2258,6 +2259,7 @@
   <script src="assets/js/jquery-3.6.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
   <script src="assets/js/select2.min.js"></script>
+  <script src="assets/js/jquery-ui.js"></script>
   <script src="assets/js/swiper-bundle.min.js"></script>
   <script src="assets/js/mixitup.min.js"></script>
   <script src="assets/js/jquery.counterup.min.js"></script>
