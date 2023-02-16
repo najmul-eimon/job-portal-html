@@ -65,7 +65,7 @@ $(function(){
     loop: true,
     autoplay: true,
     speed: 3000,
-    allowTouchMove:false,
+    allowTouchMove:true,
     freeModeMomentum: false,
     breakpoints: {
       576: {
@@ -103,6 +103,7 @@ $(function(){
 
   var gridContainer = document.querySelector('#job-grid-container');
   var allGridContainer = document.querySelector('#all-job-grid-container');
+  var allCompanies = document.querySelector('#all-companies');
 
   if(gridContainer){
     var mixer1 = mixitup(gridContainer);
@@ -110,6 +111,10 @@ $(function(){
 
   if(allGridContainer){
     var mixer2 = mixitup(allGridContainer);
+  }
+
+  if(allCompanies){
+    var mixer2 = mixitup(allCompanies);
   }
 
   /*======================= job slider range ========================*/
