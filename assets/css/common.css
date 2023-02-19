@@ -550,6 +550,26 @@ a:focus {
   }
 }
 
+.road1 {
+  animation: road 6s infinite;
+}
+
+.road2 {
+  animation: road 6s infinite 0.5s;
+}
+
+.road3 {
+  animation: road 6s infinite 1s;
+}
+
+.road4 {
+  animation: road 6s infinite 1.5s;
+}
+
+.road5 {
+  animation: road 6s infinite 2s;
+}
+
 /*===========================================================
 header CSS
 =============================================================*/

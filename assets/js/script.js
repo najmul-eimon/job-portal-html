@@ -57,8 +57,8 @@ $(function(){
     }
   });
 
-  /*======================= job location slider ========================*/
-  var locSwiper = new Swiper(".blog-slider", {
+  /*======================= blog slider ========================*/
+  var blogSwiper = new Swiper(".blog-slider", {
     spaceBetween: 24,
     grabCursor: false,
     slidesPerView: 1,
@@ -84,6 +84,33 @@ $(function(){
     },
   });
 
+  /*======================= job-location slider ========================*/
+  var jobLocSwiper = new Swiper(".job-location-slider", {
+    spaceBetween: 24,
+    grabCursor: false,
+    slidesPerView: 1,
+    loop: true,
+    autoplay: true,
+    speed: 3000,
+    allowTouchMove:true,
+    freeModeMomentum: false,
+    breakpoints: {
+      576: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      }
+    },
+    pagination: {
+      el: ".job-pagination",
+      clickable: true,
+    },
+  });
+
   /*======================= Counter up ========================*/
   $('.counter').counterUp({
     delay: 10,
@@ -103,6 +130,8 @@ $(function(){
 
   var gridContainer = document.querySelector('#job-grid-container');
   var allGridContainer = document.querySelector('#all-job-grid-container');
+  var latestGridContainer = document.querySelector('#latest-job-grid-container');
+  var blogGridContainer = document.querySelector('#blog-grid-container');
   var allCompanies = document.querySelector('#all-companies');
 
   if(gridContainer){
@@ -113,8 +142,16 @@ $(function(){
     var mixer2 = mixitup(allGridContainer);
   }
 
+  if(latestGridContainer){
+    var mixer3 = mixitup(latestGridContainer);
+  }
+
+  if(blogGridContainer){
+    var mixer4 = mixitup(blogGridContainer);
+  }
+
   if(allCompanies){
-    var mixer2 = mixitup(allCompanies);
+    var mixer5 = mixitup(allCompanies);
   }
 
   /*======================= job slider range ========================*/
