@@ -109,7 +109,14 @@ pricing CSS
   right: calc(0% - 50px);
 }
 
+@media screen and (max-width:991px){
+  .pricing{
+    margin-top: 56px;
+  }
+}
+
 @media screen and (max-width:767px){
+  
   .pricing .pricing-cards {
     padding-top: 32px;
   }

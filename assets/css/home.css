@@ -42,19 +42,6 @@ banner CSS
   font-weight: 800;
 }
 
-/* animation for banner */
-.red-light {
-  animation: red 2s linear infinite;
-}
-
-.white-light {
-  animation: white 2s linear infinite;
-}
-
-.grey-light {
-  animation: grey 2s linear infinite;
-}
-
 
 @media (min-width: 768px) and (max-width: 991px) {
   .banner {
