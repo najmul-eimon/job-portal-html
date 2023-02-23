@@ -46,6 +46,13 @@ pricing CSS
   padding: 8px 0;
 }
 
+.pricing .single-card h3 small{
+  display: inline-block;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
 .pricing .single-card h3 span{
   font-size: 24px;
   color: rgba(13, 13, 14, 0.4);
@@ -102,7 +109,7 @@ pricing CSS
 }
 
 .pricing .single-card .animate-btn::before {
-  right: calc(100% - 30px);
+  right: 100%;
 }
 
 .pricing .single-card .animate-btn:hover::before {
@@ -125,12 +132,16 @@ pricing CSS
     padding: 16px 32px;
   }
 
+  .pricing .single-card h3{
+    font-size: 40px;
+  }
+
   .pricing .single-card a {
     padding: 8px 0;
   }
 
   .pricing .single-card .animate-btn:hover::before {
-    right: calc(100% - 30px);
+    right: 100%;
   }
 }
 
@@ -177,6 +188,9 @@ faq CSS
   .faq .section-title {
     padding-bottom: 40px;
   }
+  .faq .section-title h2{
+    font-size: 32px;
+  }
 }
 
 /*===========================================================
@@ -218,7 +232,7 @@ faq-contact CSS
 }
 
 .faq-contact .animate-btn::before {
-  right: calc(100% - 30px);
+  right: 100%;
 }
 
 .faq-contact .animate-btn:hover::before {
@@ -236,7 +250,7 @@ faq-contact CSS
   }
 
   .faq-contact .animate-btn:hover::before {
-    right: calc(100% - 30px);
+    right: 100%;
   }
 
   .faq-contact h2 {

@@ -43,16 +43,19 @@ $(function(){
     freeModeMomentum: false,
     breakpoints: {
       576: {
-        slidesPerView: 5,
+        slidesPerView: 4,
       },
       768: {
-        slidesPerView: 7,
+        slidesPerView: 6,
       },
       992: {
-        slidesPerView: 9,
+        slidesPerView: 7,
       },
       1200:{
-        slidesPerView: 12,
+        slidesPerView: 10,
+      },
+      1500:{
+        slidesPerView: 12
       }
     }
   });

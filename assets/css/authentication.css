@@ -107,13 +107,11 @@ register CSS
 }
 
 .input-box button.login-btn{
-  padding: 12px 0;
-  max-width: 400px;
-  width: 100%;
+  padding: 12px 180px;
 }
 
 .input-box .animate-btn::before{
-  right: calc(100% - 30px);
+  right: 100%;
 }
 
 .input-box .animate-btn:hover::before{
@@ -123,10 +121,6 @@ register CSS
 @media screen and (max-width:991px){
   .register{
     margin-top: 56px;
-  }
-
-  .input-box .animate-btn:hover::before{
-    right: calc(100% - 30px);
   }
 }
 
@@ -151,14 +145,20 @@ register CSS
 
   .input-box .inputs,
   .input-box .inputs::placeholder,
-  .input-box p, .input-check-box span {
+  .input-box p, 
+  .input-check-box span {
     font-size: 12px;
+  }
+
+  .input-box .animate-btn:hover::before{
+    right: 100%;
   }
   
 }
 
 @media screen and (max-width:575px){
-  .input-box button{
+  .input-box button,
+  .input-box button.login-btn{
     padding: 12px 0;
     width: 100%;
   }

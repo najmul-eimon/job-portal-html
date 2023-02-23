@@ -83,6 +83,14 @@ banner CSS
   }
 }
 
+@media screen and (max-width: 575px) {
+  .banner .banner-bg {
+    width: 250%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 /*===========================================================
 company CSS
 =============================================================*/
@@ -127,6 +135,7 @@ start-with CSS
 .start-with .left-part h2 {
   color: var(--primary-text);
   font-size: 32px;
+  line-height: 42px;
   font-weight: 800;
 }
 
@@ -174,9 +183,7 @@ start-with CSS
   width: fit-content;
   backdrop-filter: blur(10.5px);
   background: rgba(255, 255, 255, 0.3);
-  /* background: linear-gradient(to right, rgba(255, 255, 255, 0.31), rgba(194, 225, 255, 0.19), rgba(143, 200, 254, 0.2), rgba(52, 142, 253, 0.56)); */
   position: absolute;
-  animation: mover 2s infinite alternate;
 }
 
 .start-with .single-card.job {
@@ -346,7 +353,7 @@ start-with CSS
   .start-with .buttons .find-btn,
   .start-with .buttons .reg-btn {
     width: 100%;
-    padding: 12px 0;
+    padding: 11px 0;
   }
 
   .start-with .single-card {
@@ -386,8 +393,11 @@ start-with CSS
     font-size: 10px;
   }
 
-  .start-with .buttons .find-btn:hover::before {
-    right: calc(100% - 38px);
+  .start-with .buttons .find-btn::before,
+  .start-with .buttons .find-btn:hover::before,
+  .start-with .buttons .reg-btn::before,
+  .start-with .buttons .reg-btn:hover::before{
+    right: 100%;
   }
 }
 

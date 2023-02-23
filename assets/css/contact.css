@@ -110,6 +110,14 @@ contact CSS
   padding: 8px 106px;
 }
 
+.contact .input-box button::before{
+  right: 100%;
+}
+
+.contact .input-box button:hover::before{
+  right: calc(0% - 30%);
+}
+
 .contact .map-card{
   width: 100%;
   height: 664px;
@@ -154,6 +162,11 @@ contact CSS
 
   .contact .map-card{
     height: 400px;
+  }
+
+  .contact .input-box button::before,
+  .contact .input-box button:hover::before{
+    right: 100%;
   }
 }
 
