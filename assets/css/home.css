@@ -173,7 +173,6 @@ start-with CSS
 }
 
 .start-with .single-card {
-  box-shadow: 0px 26.3014px 52.6027px -9.86301px rgba(0, 0, 0, 0.14);
   padding: 14px 20px;
   border-radius: 18px;
   display: flex;
@@ -181,24 +180,30 @@ start-with CSS
   gap: 20px;
   min-width: 240px;
   width: fit-content;
-  backdrop-filter: blur(10.5px);
-  background: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(141.51deg, rgba(255, 255, 255, 0.4) 0.96%, rgba(255, 255, 255, 0.1) 99.4%);
+  backdrop-filter: blur(4.163px);
   position: absolute;
 }
 
 .start-with .single-card.job {
   top: 80px;
   left: 87px;
+  z-index: 20;
+  box-shadow: 0px 26.3014px 52.6027px -9.86301px rgba(0, 0, 0, 0.14);
 }
 
 .start-with .single-card.hired {
   right: 0;
   bottom: 106px;
+  z-index: 10;
+  box-shadow: 0px 3.57534px 7.15068px -1.78767px rgba(0, 0, 0, 0.1), 0px 1.78767px 3.57534px -1.78767px rgba(0, 0, 0, 0.06);
 }
 
 .start-with .single-card.companies {
   left: 62px;
   bottom: 20px;
+  z-index: 20;
+  box-shadow: 0px 17.0548px 20.4658px -3.41096px rgba(0, 0, 0, 0.08), 0px 6.82192px 6.82192px -3.41096px rgba(0, 0, 0, 0.03);
 }
 
 .start-with .single-card .icon-box {
