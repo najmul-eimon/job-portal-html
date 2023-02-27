@@ -32,7 +32,8 @@ banner CSS
   animation: enlarge 3s infinite;
 } 
 
-.banner .popular-search {
+.banner .popular-search,
+.banner .popular-search a {
   font-weight: 500;
   font-size: 16px;
   color: rgba(13, 13, 14, 0.6);
