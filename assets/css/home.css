@@ -622,23 +622,23 @@ latest-job CSS
   transition: all 0.3s linear;
 }
 
-.latest-job .single-job ul li p {
+.latest-job .single-job ul li a {
+  display: inline-block;
   font-weight: 500;
   font-size: 14px;
   color: rgba(13, 13, 14, 0.8);
   transition: all 0.3s linear;
 }
 
-.latest-job .single-job ul li:hover p {
+.latest-job .single-job ul li:hover a {
   color: var(--primary-text);
 }
 
 .latest-job .single-job ul li:hover svg path {
   fill: var(--primary-text);
-  /* filter: brightness(0) saturate(100%) invert(2%) sepia(4%) saturate(1485%) hue-rotate(201deg) brightness(90%) contrast(94%); */
 }
 
-.latest-job .single-job a {
+.latest-job .single-job .more {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -648,11 +648,11 @@ latest-job CSS
   width: fit-content;
 }
 
-.latest-job .single-job a i {
+.latest-job .single-job .more i {
   font-size: 20px;
 }
 
-.latest-job .single-job a:hover {
+.latest-job .single-job .more:hover {
   gap: 8px;
 }
 
