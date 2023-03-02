@@ -56,7 +56,8 @@ job-banner CSS
     margin-bottom: 20px;
   }
 
-  .job-banner .popular-search {
+  .job-banner .popular-search,
+  .job-banner .popular-search a {
     font-size: 10px;
   }
 

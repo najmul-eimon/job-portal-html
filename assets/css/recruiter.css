@@ -104,14 +104,15 @@ all-company CSS
   transition: all 0.3s linear;
 }
 
-.all-company .single-company ul li p {
+.all-company .single-company ul li a {
+  display: inline-block;
   font-weight: 500;
   font-size: 14px;
   color: rgba(13, 13, 14, 0.8);
   transition: all 0.3s linear;
 }
 
-.all-company .single-company ul li:hover p {
+.all-company .single-company ul li:hover a {
   color: var(--primary-text);
 }
 

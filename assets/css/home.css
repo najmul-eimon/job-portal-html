@@ -67,7 +67,8 @@ banner CSS
     height: 6px;
   }
 
-  .banner .popular-search {
+  .banner .popular-search,
+  .banner .popular-search a{
     font-size: 10px;
   }
 
