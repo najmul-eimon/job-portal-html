@@ -137,6 +137,7 @@ not-found CSS
   background: #00AFE2;
   border-radius: 50%;
   display: none;
+  flex-shrink: 0;
 }
 
 @media (min-width: 1100px) and (max-width:1399px) {
