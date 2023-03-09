@@ -179,6 +179,7 @@ a:focus {
   font-weight: 500;
   z-index: 10;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .animate-btn::before {
@@ -266,7 +267,7 @@ a:focus {
 }
 
 .load-more-main button {
-  padding: 16px 26px;
+  padding: 15px 26px;
   font-weight: 600;
   font-size: 16px;
   color: var(--primary);

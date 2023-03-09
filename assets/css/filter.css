@@ -67,7 +67,7 @@ filter CSS
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 18px 28px;
+  padding: 16px 28px;
 }
 
 .filter-job .search-btn i {
